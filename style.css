@@ -7,96 +7,90 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 
 /* Navigation */
 nav { 
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-    padding: 15px 10%; 
+    padding: 15px 5%; 
     background: var(--card); 
     border-bottom: 1px solid var(--border); 
     position: sticky; 
-    top:0; 
-    z-index:1000; 
+    top: 0; 
+    z-index: 1000;
+    width: 100%;
 }
-.logo-container { display: flex; align-items: center; gap: 10px; }
-.school-logo { height: 40px; width: 40px; border-radius: 50%; object-fit: cover; }
-.logo-text { font-size: 20px; font-weight: 800; color: var(--primary); }
+.logo-container { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.school-logo { height: 35px; width: 35px; border-radius: 50%; object-fit: cover; }
+.logo-text { font-size: 18px; font-weight: 800; color: var(--primary); white-space: nowrap; }
 .logo-text span { color: #fff; }
 
-.links { display: flex; align-items: center; gap: 20px; }
-.links a { color: #8b949e; text-decoration: none; font-size: 14px; transition: 0.3s; }
+.links { display: flex; align-items: center; gap: 15px; }
+.links a { color: #8b949e; text-decoration: none; font-size: 13px; transition: 0.3s; white-space: nowrap; }
 .links a:hover { color: var(--primary); }
-.contact-btn { border: 1px solid var(--primary); padding: 8px 15px; border-radius: 6px; color: var(--primary) !important; }
+.contact-btn { border: 1px solid var(--primary); padding: 5px 12px; border-radius: 6px; color: var(--primary) !important; }
 
 /* Hero Section */
-.hero { text-align: center; padding: 100px 10%; }
-.hero-badge { background: rgba(88, 166, 255, 0.1); color: var(--primary); padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 20px; font-weight: bold; font-size: 13px; }
-.hero h1 { font-size: 3.5rem; letter-spacing: -1px; margin-bottom: 15px; line-height: 1.2; }
-.hero p { color: #8b949e; font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; }
-.btn-main { background: var(--accent); padding: 15px 30px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(35, 134, 54, 0.3); display: inline-block; }
-.btn-sub { border: 1px solid var(--border); padding: 15px 30px; border-radius: 8px; color: #fff; text-decoration: none; margin-left: 10px; display: inline-block; }
+.hero { text-align: center; padding: 80px 5%; width: 100%; }
+.hero-badge { background: rgba(88, 166, 255, 0.1); color: var(--primary); padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 20px; font-weight: bold; font-size: 12px; }
+.hero h1 { font-size: 3rem; letter-spacing: -1px; margin-bottom: 15px; line-height: 1.1; word-wrap: break-word; }
+.hero p { color: #8b949e; font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; line-height: 1.5; }
+.hero-btns { display: flex; flex-direction: column; gap: 15px; align-items: center; justify-content: center; }
+
+.btn-main, .btn-sub { 
+    width: 80%; 
+    max-width: 300px;
+    padding: 14px 25px; 
+    border-radius: 8px; 
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-main { background: var(--accent); color: #fff; box-shadow: 0 4px 15px rgba(35, 134, 54, 0.3); }
+.btn-sub { border: 1px solid var(--border); color: #fff; }
 
 /* Trust Bar */
-.trust-bar { display: flex; justify-content: space-around; padding: 30px 10%; background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); color: #8b949e; flex-wrap: wrap; gap: 20px; }
-.trust-item i { color: var(--accent); margin-right: 8px; }
+.trust-bar { display: flex; justify-content: center; padding: 30px 5%; background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); color: #8b949e; flex-wrap: wrap; gap: 15px; }
+.trust-item { font-size: 13px; }
+.trust-item i { color: var(--accent); margin-right: 5px; }
 
-/* Feature Grid */
-.feature-grid-section { padding: 80px 10%; }
-.section-title { font-size: 2.2rem; text-align: center; margin-bottom: 50px; font-weight: bold; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.f-card { background: var(--card); padding: 40px; border-radius: 12px; border: 1px solid var(--border); text-align: center; }
-.f-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+/* Sections */
+.section-title { font-size: 1.8rem; text-align: center; margin-bottom: 40px; font-weight: bold; padding: 0 5%; }
+.feature-grid-section, .comp-section, .pricing-section, .contact-section { padding: 60px 5%; width: 100%; }
 
-/* Comparison Table */
-.comp-section { padding: 80px 10%; }
-.table-container { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 12px; border: 1px solid var(--border); min-width: 500px; }
-th, td { padding: 20px; text-align: center; border: 1px solid var(--border); }
-.mirage-col { background: rgba(88, 166, 255, 0.05); color: var(--primary); font-weight: bold; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.f-card { background: var(--card); padding: 30px; border-radius: 12px; border: 1px solid var(--border); text-align: center; }
 
 /* Pricing */
-.pricing-section { padding: 80px 10%; }
-.pricing-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
-.p-card { background: var(--card); padding: 40px; border-radius: 15px; border: 1px solid var(--border); width: 320px; text-align: center; position: relative; }
-.price { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
-.price span { font-size: 1rem; color: #8b949e; }
-.p-card ul { list-style: none; text-align: left; margin-bottom: 30px; }
-.p-card ul li { margin-bottom: 10px; color: #c9d1d9; }
-.p-card ul li::before { content: "✓"; color: var(--accent); margin-right: 10px; }
-.premium { border-color: var(--primary); transform: scale(1.05); }
-.premium .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #000; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+.pricing-grid { display: flex; gap: 25px; justify-content: center; flex-wrap: wrap; }
+.p-card { background: var(--card); padding: 30px; border-radius: 15px; border: 1px solid var(--border); width: 100%; max-width: 320px; text-align: center; position: relative; }
 
-/* Contact Section */
-.contact-section { padding: 80px 10%; background: #0d1117; }
-.contact-card { background: var(--card); padding: 50px; border-radius: 20px; border: 1px solid var(--border); text-align: center; max-width: 800px; margin: 0 auto; }
-.btn-telegram { background: #0088cc; color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; transition: 0.3s; }
-.btn-telegram:hover { transform: scale(1.05); }
-
-/* --- MOBILE RESPONSIVE FIX --- */
+/* --- MOBILE RESPONSIVE FIX (Important) --- */
 @media (max-width: 768px) {
-    nav {
+    nav { 
         flex-direction: column; 
-        padding: 20px 5%;
-        text-align: center;
+        gap: 15px; 
+        padding: 15px 5%;
     }
-    .links {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .links { 
+        width: 100%;
+        justify-content: center; 
         gap: 10px;
+        flex-wrap: wrap;
     }
-    .links a {
-        margin-left: 0;
-        font-size: 13px;
-    }
-    .hero { padding: 60px 5%; }
-    .hero h1 { font-size: 2.4rem; }
-    .hero p { font-size: 1rem; }
-    .btn-sub { margin-left: 0; margin-top: 10px; width: 100%; }
-    .btn-main { width: 100%; }
-    .trust-bar { padding: 20px 5%; }
-    .section-title { font-size: 1.8rem; }
+    .links a { font-size: 12px; }
+    
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 0.95rem; }
+    
+    .hero-btns { width: 100%; }
+    .btn-main, .btn-sub { width: 100%; margin: 0; }
+}
+
+@media (min-width: 769px) {
+    .hero-btns { flex-direction: row; }
+    .btn-main, .btn-sub { width: auto; }
 }
