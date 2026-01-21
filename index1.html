@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirage Spoofer - Beta Registration</title>
+    <style>
+        /* --- 1. GLOBAL SETTINGS & RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a; /* Deep Dark Background */
+            color: #ffffff;
+            overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+        }
+
+        /* --- 2. BACKGROUND ANIMATION (Cyberpunk Vibe) --- */
+        .background-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(98, 0, 238, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(0, 229, 255, 0.1), transparent 25%);
+            z-index: -1;
+        }
+
+        /* --- 3. LAYOUT CONTAINER (Responsiveness Controller) --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* --- 4. HERO SECTION --- */
+        .logo {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #fff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+        }
+
+        /* --- 5. THE OFFER BANNER (Highlighted) --- */
+        .offer-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            max-width: 90%;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .offer-text {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .highlight-red {
+            color: #ff4757;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            display: block; /* Mobile pe new line me layega */
+            margin-top: 5px;
+            text-shadow: 0 0 10px rgba(255, 71, 87, 0.5);
+        }
+
+        /* --- 6. THE PREMIUM 3D BUTTON (8K Quality) --- */
+        .btn-wrapper {
+            margin: 20px 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .premium-3d-button {
+            position: relative;
+            display: inline-block;
+            padding: 22px 50px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            
+            /* Gradient Background */
+            background: linear-gradient(135deg, #6200EE 0%, #7B1FA2 100%);
+            
+            /* 3D Depth Shadows */
+            box-shadow: 
+                0 10px 25px rgba(98, 0, 238, 0.5),
+                0 6px 0px #3700b3, /* Solid 3D bottom */
+                inset 0 -2px 5px rgba(0,0,0,0.2),
+                inset 0 2px 5px rgba(255,255,255,0.3);
+            
+            transition: all 0.1s ease;
+            transform: translateY(0);
+        }
+
+        /* Click Effect (Pressing Down) */
+        .premium-3d-button:active {
+            transform: translateY(6px); /* Move down */
+            box-shadow: 
+                0 4px 10px rgba(98, 0, 238, 0.4),
+                0 0px 0px #3700b3, /* Shadow disappears */
+                inset 0 -2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Shine Animation */
+        .premium-3d-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .premium-3d-button:hover::before {
+            left: 100%;
+        }
+
+        /* --- 7. FEATURES GRID (Responsive) --- */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Laptop: 3 Columns */
+            gap: 20px;
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+        .feature-title { font-weight: bold; margin-bottom: 5px; color: #00E5FF; }
+        .feature-desc { font-size: 0.9rem; color: #aaa; }
+
+        /* --- 8. FOOTER --- */
+        footer {
+            margin-top: 60px;
+            color: #555;
+            font-size: 0.8rem;
+            padding-bottom: 20px;
+        }
+
+        /* --- 9. MOBILE RESPONSIVENESS (The Magic) --- */
+        /* Jab screen 768px (Mobile) se choti ho, tab ye rules lagenge */
+        @media (max-width: 768px) {
+            .logo { font-size: 2.2rem; }
+            
+            .offer-box { 
+                padding: 15px; 
+                margin-bottom: 30px;
+            }
+            
+            .highlight-red { font-size: 1.1rem; }
+
+            .premium-3d-button {
+                padding: 18px 30px; /* Thoda chota padding */
+                font-size: 1.1rem; /* Thoda chota text */
+                width: 100%; /* Mobile par full width button */
+            }
+
+            .features {
+                grid-template-columns: 1fr; /* Mobile: 1 Column only (Mix nahi hoga) */
+                gap: 15px;
+            }
+
+            .container {
+                padding: 20px; /* Side spacing */
+            }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-mesh"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">MIRAGE SPOOFER</h1>
+            <p class="tagline">The True Identity Manager for Rooted Devices</p>
+        </div>
+
+        <div class="offer-box">
+            <span class="offer-text">Limited Beta Slots Available</span>
+            <span class="highlight-red">🎁 Get 15 Days Free Premium Trial</span>
+            <p style="margin-top: 5px; font-size: 0.9rem; color: #ccc;">(Upon Official Launch)</p>
+        </div>
+
+        <div class="btn-wrapper">
+            <a href="https://forms.gle/qabYyJMKrd2gbtjE6" target="_blank" class="premium-3d-button">
+                JOIN BETA NOW 🚀
+            </a>
+        </div>
+        <p style="margin-top: 10px; color: #666; font-size: 0.85rem;">Only 50 slots for Batch 1</p>
+
+        <div class="features">
+            <div class="feature-card">
+                <span class="feature-icon">🌍</span>
+                <div class="feature-title">Country Spoof</div>
+                <div class="feature-desc">Fix Uber location issues. Force USA/UK Sim Identity.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎭</span>
+                <div class="feature-title">Deep Identity</div>
+                <div class="feature-desc">Change IMEI, RAM, CPU, GPU & Android ID instantly.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🧹</span>
+                <div class="feature-title">Auto Wiper</div>
+                <div class="feature-desc">Auto-clears app data when switching profiles.</div>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2024 Mirage Spoofer. Designed for Professionals. <br> Requires Root & LSPosed.
+        </footer>
+    </div>
+
+</body>
+</html>
