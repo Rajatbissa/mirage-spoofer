@@ -3,270 +3,420 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirage Spoof | Professional Android Identity Modifier</title>
+    <title>Mirage Spoofer | The Ultimate Android Stealth Tool</title>
     
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
-        /* --- 🔥 NEW PREMIUM STYLES (Added for Beta Launch) 🔥 --- */
+        /* --- GLOBAL VARIABLES --- */
+        :root {
+            --primary: #6200EE;
+            --secondary: #03DAC6;
+            --bg-dark: #050505;
+            --bg-card: #121212;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --accent-red: #ff4757;
+            --glow: 0 0 20px rgba(98, 0, 238, 0.3);
+        }
 
-        /* 1. The Offer Box (Glass Effect) */
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: var(--bg-dark); 
+            color: var(--text-main); 
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; }
+        .logo span { color: var(--primary); }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+        .btn-telegram {
+            background: #0088cc;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 140px 20px 80px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(98,0,238,0.15) 0%, rgba(5,5,5,1) 70%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* OFFER BOX */
         .offer-box {
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(98, 0, 238, 0.3);
             padding: 20px;
             border-radius: 16px;
-            margin: 30px auto; /* Centered */
+            margin: 30px auto;
             backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-            max-width: 600px;
-            text-align: center;
-            animation: pulse-glow 3s infinite alternate;
+            box-shadow: 0 0 30px rgba(98, 0, 238, 0.15);
+            max-width: 500px;
+            animation: pulse-border 2s infinite alternate;
         }
 
         .offer-text {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #ccc;
-            display: block;
-            margin-bottom: 5px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            display: block;
+            margin-bottom: 5px;
         }
 
         .highlight-red {
-            color: #ff4757; /* Neon Red/Pink */
+            color: var(--accent-red);
             font-weight: 800;
             text-transform: uppercase;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             display: block;
-            text-shadow: 0 0 15px rgba(255, 71, 87, 0.6);
+            text-shadow: 0 0 15px rgba(255, 71, 87, 0.4);
         }
 
-        .offer-sub {
-            font-size: 0.85rem;
-            color: #888;
-            margin-top: 5px;
+        @keyframes pulse-border {
+            from { border-color: rgba(98, 0, 238, 0.3); }
+            to { border-color: rgba(255, 71, 87, 0.6); }
         }
 
-        /* 2. The 8K 3D Button */
-        .btn-wrapper {
-            margin: 30px 0 50px 0;
-            text-align: center;
-        }
-
-        .premium-3d-button {
-            position: relative;
+        /* 3D BUTTON */
+        .cta-btn {
             display: inline-block;
-            padding: 22px 60px;
-            font-size: 1.2rem;
-            font-weight: 800;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, var(--primary), #3700b3);
             color: white;
+            font-weight: 800;
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
             border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            
-            /* High Quality Gradient */
-            background: linear-gradient(135deg, #6200EE 0%, #B00020 100%);
-            
-            /* 3D Depth Shadows */
-            box-shadow: 
-                0 10px 25px rgba(98, 0, 238, 0.4),
-                0 6px 0px #3700b3, /* The solid 3D bottom part */
-                inset 0 -2px 5px rgba(0,0,0,0.2),
-                inset 0 2px 5px rgba(255,255,255,0.3);
-            
-            transition: all 0.1s ease;
-            transform: translateY(0);
+            box-shadow: 0 10px 30px rgba(98, 0, 238, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(98, 0, 238, 0.6);
         }
 
-        /* Click Effect (Press Down) */
-        .premium-3d-button:active {
-            transform: translateY(6px); /* Moves down */
-            box-shadow: 
-                0 4px 10px rgba(98, 0, 238, 0.4),
-                0 0px 0px #3700b3, /* Bottom shadow disappears */
-                inset 0 -2px 5px rgba(0,0,0,0.2);
+        /* --- SECTIONS --- */
+        .features, .comparison, .pricing { padding: 80px 5%; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 60px; }
+        .section-title span { color: var(--primary); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
-        /* Shine Animation */
-        .premium-3d-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: 0.6s;
+        .card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
         }
 
-        .premium-3d-button:hover::before {
-            left: 100%;
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: var(--glow);
         }
 
-        /* 3. Mobile Responsiveness */
+        .card i { font-size: 2rem; color: var(--primary); margin-bottom: 20px; }
+        .card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
+
+        /* --- STEALTH HIGHLIGHT --- */
+        .stealth-section {
+            background: linear-gradient(45deg, #1a1a1a, #0d0d0d);
+            padding: 80px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+        .stealth-text h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--accent-red); }
+        .feature-tag {
+            background: rgba(255, 71, 87, 0.1);
+            color: var(--accent-red);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-right: 10px;
+            border: 1px solid rgba(255, 71, 87, 0.3);
+        }
+
+        /* --- COMPARISON TABLE --- */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 16px;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+        }
+        table { width: 100%; border-collapse: collapse; background: #121212; min-width: 600px; }
+        th, td { padding: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        th { background: #1a1a1a; font-size: 1.1rem; }
+        .col-mirage { background: rgba(98, 0, 238, 0.05); border-left: 2px solid var(--primary); border-right: 2px solid var(--primary); }
+        .col-mirage-head { background: var(--primary); color: white; border-radius: 10px 10px 0 0; }
+        .check { color: #00E676; font-size: 1.2rem; }
+        .cross { color: #FF1744; font-size: 1.2rem; }
+        .warn { color: #FFC400; font-size: 1rem; }
+
+        /* --- FOOTER --- */
+        footer { padding: 40px; text-align: center; color: #555; border-top: 1px solid #222; }
+
         @media (max-width: 768px) {
-            .offer-box {
-                margin: 20px 10px;
-                padding: 15px;
-            }
-            .highlight-red {
-                font-size: 1.1rem;
-            }
-            .premium-3d-button {
-                width: 90%; /* Full width on mobile */
-                padding: 18px 0;
-                font-size: 1rem;
-            }
-            .logo-text { font-size: 1.5rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .stealth-section { text-align: center; }
         }
-
-        @keyframes pulse-glow {
-            from { box-shadow: 0 8px 32px 0 rgba(98, 0, 238, 0.2); border-color: rgba(255,255,255,0.1); }
-            to { box-shadow: 0 8px 32px 0 rgba(98, 0, 238, 0.5); border-color: rgba(98, 0, 238, 0.5); }
-        }
-
-        /* Basic Resets needed if style.css is missing locally */
-        body { margin: 0; font-family: sans-serif; background: #0a0a0a; color: white; }
-        nav { display: flex; justify-content: space-between; padding: 20px; align-items: center; }
-        .logo-text { font-weight: bold; font-size: 1.8rem; }
-        .logo-text span { color: #6200EE; }
-        .links a { color: white; text-decoration: none; margin-left: 20px; }
-        .hero { text-align: center; padding: 50px 20px; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .hero p { color: #aaa; max-width: 600px; margin: 0 auto 30px auto; }
-        
-        /* Grid Layouts from your original code preserved roughly */
-        .grid, .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; }
-        .f-card, .p-card { background: #1a1a1a; padding: 20px; border-radius: 10px; text-align: center; }
-        .contact-section { text-align: center; padding: 50px; }
-        .btn-telegram { background: #0088cc; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo-container">
-            <div class="logo-text">MIRAGE<span>SPOOF</span></div>
-        </div>
-        <div class="links">
+        <div class="logo">MIRAGE<span>SPOOF</span></div>
+        <div class="nav-links">
             <a href="#features">Features</a>
+            <a href="#comparison">Compare</a>
             <a href="#pricing">Pricing</a>
-            <a href="https://t.me/miragespoofer_root" target="_blank" class="contact-btn">Telegram</a>
+            <a href="https://t.me/miragespoofer_root" class="btn-telegram" target="_blank"><i class="fab fa-telegram-plane"></i> Join Telegram</a>
         </div>
     </nav>
 
     <header class="hero">
-        <div style="background: #333; display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 15px; color: #00E5FF;">
-            BETA ACCESS NOW LIVE 🚀
+        <div style="background: rgba(255,255,255,0.1); display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 15px; color: var(--secondary); border: 1px solid var(--secondary);">
+            🚀 BETA ACCESS LIVE
         </div>
 
-        <h1>The World's Most Advanced Identity Spoofer.</h1>
-        <p>Pass SafetyNet, spoof realistic Gmails, and mask deep system IDs with surgical precision. Stay invisible, stay secure.</p>
-
+        <h1>The Ghost Protocol for Android.</h1>
+        <p>Bypass bans, hide Root, and mask your device identity with military-grade precision.</p>
+        
         <div class="offer-box">
-            <span class="offer-text">Limited Beta Slots Available (Batch 1)</span>
+            <span class="offer-text">Beta Tester Exclusive (Batch-1)</span>
             <span class="highlight-red">🎁 Get 15 Days Free Premium Trial</span>
-            <p class="offer-sub">(Valid upon Official Launch for registered testers)</p>
+            <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">(Valid upon Official Launch for registered testers)</p>
         </div>
 
-        <div class="btn-wrapper">
-            <a href="https://forms.gle/qabYyJMKrd2gbtjE6" target="_blank" class="premium-3d-button">
-                JOIN BETA NOW 🚀
+        <div>
+            <a href="https://forms.gle/qabYyJMKrd2gbtjE6" class="cta-btn" target="_blank">
+                Join Beta Now <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
             </a>
         </div>
-
     </header>
 
-    <section class="trust-bar" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 20px; background: #111;">
-        <div class="trust-item"><i class="fas fa-shield-alt"></i> 100% Secure</div>
-        <div class="trust-item"><i class="fas fa-user-secret"></i> No Data Logging</div>
-        <div class="trust-item"><i class="fas fa-check-circle"></i> SafetyNet Passed</div>
-        <div class="trust-item"><i class="fas fa-bolt"></i> Instant Randomizer</div>
-    </section>
-
-    <section id="features" class="feature-grid-section">
-        <h2 style="text-align: center; margin-top: 40px;">Why Professionals Choose Us</h2>
-        <div class="grid">
-            <div class="f-card">
-                <i class="fas fa-envelope-open-text" style="font-size: 2rem; color: #6200EE; margin-bottom: 10px;"></i>
-                <h3>Realistic Gmails</h3>
-                <p>Generate high-quality Gmail IDs that look like real users, not random digits.</p>
+    <section class="stealth-section">
+        <div class="stealth-text">
+            <h2><i class="fas fa-ghost"></i> Invisible "Ghost Mode"</h2>
+            <p style="color: #ccc; margin-bottom: 20px; font-size: 1.1rem;">Targeted apps (like Banking, Uber, Games) scan your phone to find Spoofers. Mirage is different.</p>
+            <p style="color: #aaa; margin-bottom: 20px;">We integrate <strong>Hide My App List</strong> logic directly into the core. Mirage hides itself, Zygisk, and LSPosed from the system.</p>
+            <div>
+                <span class="feature-tag">Anti-Detect</span>
+                <span class="feature-tag">No Xposed Modules Found</span>
+                <span class="feature-tag">Deep Hide</span>
             </div>
-            <div class="f-card">
-                <i class="fas fa-fingerprint" style="font-size: 2rem; color: #6200EE; margin-bottom: 10px;"></i>
-                <h3>Deep ID Masking</h3>
-                <p>Spoof GSF ID, Android ID, IMEI, and Media DRM IDs with system-level integration.</p>
-            </div>
-            <div class="f-card">
-                <i class="fas fa-globe-americas" style="font-size: 2rem; color: #6200EE; margin-bottom: 10px;"></i>
-                <h3>Global SIM Spoof</h3>
-                <p>Change network details for 15+ countries. Fixes "India Location" issues in Uber.</p>
+        </div>
+        <div class="stealth-visual">
+            <div style="background: #222; padding: 20px; border-radius: 10px; border: 1px solid #333; width: 300px; text-align: left;">
+                <div style="color: #444; margin-bottom: 10px; font-size: 0.8rem;">SCAN RESULT:</div>
+                <div style="color: #00E676; margin-bottom: 5px;">✔ Root: Not Found</div>
+                <div style="color: #00E676; margin-bottom: 5px;">✔ Xposed: Not Found</div>
+                <div style="color: #00E676; margin-bottom: 5px;">✔ Suspicious Apps: 0 Found</div>
+                <div style="border-top: 1px solid #444; margin-top: 10px; padding-top: 10px; color: white; font-weight: bold;">Status: CLEAN</div>
             </div>
         </div>
     </section>
 
-    <section id="comparison" class="comp-section">
-        <h2 style="text-align: center; margin-top: 40px;">Mirage vs Competition</h2>
-        <div class="table-container" style="overflow-x: auto; padding: 20px; max-width: 800px; margin: 0 auto;">
-            <table style="width: 100%; border-collapse: collapse; text-align: center;">
+    <section id="features" class="features">
+        <div class="section-title">Professional <span>Functions</span></div>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Smart GPS + Timezone</h3>
+                <p>Mirage automatically sets the matching Timezone (e.g., New York Time) when you spoof GPS. No more "Time Mismatch" bans.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Auth Proxy Support</h3>
+                <p>Connect secure residential proxies directly within the app. Supports Username/Password authentication for unique IPs.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-microchip"></i>
+                <h3>Hardware Eraser</h3>
+                <p>Randomizes CPU Serial, RAM Info, Battery Stats, and User-Agent. Makes your device look like a completely new phone.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>SafetyNet & Integrity</h3>
+                <p>Passes `MEETS_DEVICE_INTEGRITY` and `BASIC_INTEGRITY`. Use Banking apps and Google Pay without restrictions.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>SIM & Carrier Spoof</h3>
+                <p>Change your SIM Country ISO, Operator Name (e.g., AT&T, Verizon), and Network Code to match your target location.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-envelope"></i>
+                <h3>Real Gmail Generator</h3>
+                <p>Generates realistic Gmail addresses and IDs for account creation, looking 100% human to bot filters.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparison" class="comparison">
+        <div class="section-title">Why <span>Upgrade?</span></div>
+        <div class="table-wrapper">
+            <table>
                 <thead>
-                    <tr style="background: #222; height: 50px;">
-                        <th>Capability</th>
-                        <th>Other Tools</th>
-                        <th class="mirage-col" style="color: #6200EE;">Mirage Spoof</th>
+                    <tr>
+                        <th style="text-align: left; padding-left: 30px;">Feature</th>
+                        <th>Generic Spoofer</th>
+                        <th>Device ID Changer</th>
+                        <th class="col-mirage-head">MIRAGE SPOOF</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="border-bottom: 1px solid #333; height: 40px;"><td>Realistic Gmails</td><td>❌</td><td>✅</td></tr>
-                    <tr style="border-bottom: 1px solid #333; height: 40px;"><td>Deep DRM/GSF Spoof</td><td>❌</td><td>✅</td></tr>
-                    <tr style="border-bottom: 1px solid #333; height: 40px;"><td>Hardware Masking</td><td>⚠️ Partial</td><td>✅ Full</td></tr>
-                    <tr style="height: 40px;"><td>Integrity Bypass</td><td>⚠️</td><td>✅ Yes</td></tr>
+                    <tr>
+                        <td style="text-align: left; padding-left: 30px; font-weight: bold;">Hide App List (Stealth)</td>
+                        <td><span class="cross">❌</span> Detected</td>
+                        <td><span class="cross">❌</span> Detected</td>
+                        <td class="col-mirage"><span class="check">✅</span> <strong>Built-In</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; padding-left: 30px;">Auto Timezone Sync</td>
+                        <td><span class="cross">❌</span> Manual</td>
+                        <td><span class="warn">⚠️</span> Glitchy</td>
+                        <td class="col-mirage"><span class="check">✅</span> Auto-Match GPS</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; padding-left: 30px;">Proxy Auth (User/Pass)</td>
+                        <td><span class="cross">❌</span> No</td>
+                        <td><span class="cross">❌</span> No</td>
+                        <td class="col-mirage"><span class="check">✅</span> System Level</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; padding-left: 30px;">Root Hiding (SU)</td>
+                        <td><span class="warn">⚠️</span> Basic</td>
+                        <td><span class="cross">❌</span> No</td>
+                        <td class="col-mirage"><span class="check">✅</span> Advanced</td>
+                    </tr>
+                     <tr>
+                        <td style="text-align: left; padding-left: 30px;">Realistic Gmails</td>
+                        <td><span class="cross">❌</span> Random Text</td>
+                        <td><span class="cross">❌</span> Random Text</td>
+                        <td class="col-mirage"><span class="check">✅</span> Human-Like</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <section id="pricing" class="pricing-section">
-        <h2 style="text-align: center; margin-top: 40px;">Pricing Plans</h2>
-        <div class="pricing-grid">
-            <div class="p-card">
-                <h3>Standard Edition</h3>
-                <div class="price" style="font-size: 1.5rem; font-weight: bold; margin: 10px 0;">Free<span>/lifetime</span></div>
-                <ul style="list-style: none; padding: 0; color: #aaa;">
-                    <li>Basic Device Spoofing</li>
-                    <li>Standard Profiles</li>
-                    <li>Community Support</li>
+    <section id="pricing" class="features" style="background: #0b0b0b; border-top: 1px solid #222;">
+        <div class="section-title">Premium <span>Access</span></div>
+        
+        <div class="grid">
+            <div class="card" style="text-align: center; border-top: 3px solid #777;">
+                <h3 style="color: #aaa; font-size: 1.1rem; text-transform: uppercase; margin-bottom: 20px;">Starter</h3>
+                <div style="font-size: 2.5rem; font-weight: 800; color: white;">₹1049</div>
+                <div style="font-size: 1.2rem; color: #888; margin-bottom: 20px;">/ $12 USD</div>
+                <div style="background: #222; padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 30px; font-size: 0.9rem;">15 Days Validity</div>
+                
+                <ul style="list-style: none; text-align: left; margin-bottom: 30px; color: #ccc; line-height: 2;">
+                    <li><i class="fas fa-check" style="color: #6200EE; margin-right: 10px;"></i> Full Device Spoofing</li>
+                    <li><i class="fas fa-check" style="color: #6200EE; margin-right: 10px;"></i> Hide App List</li>
+                    <li><i class="fas fa-check" style="color: #6200EE; margin-right: 10px;"></i> GPS + Proxy Support</li>
                 </ul>
+                <a href="https://t.me/miragespoofer_root" target="_blank" class="cta-btn" style="padding: 12px 30px; font-size: 0.9rem; background: #333; box-shadow: none;">Buy Key</a>
             </div>
-            
-            <div class="p-card premium" style="border: 1px solid #6200EE; position: relative;">
-                <div class="badge" style="position: absolute; top: -10px; right: 20px; background: #6200EE; padding: 5px 10px; font-size: 0.8rem; border-radius: 5px;">Coming Soon</div>
-                <h3>Pro Edition</h3>
-                <div class="price" style="font-size: 1.8rem; font-weight: bold; margin: 10px 0;">Beta Users Only</div>
-                <p style="color: #8b949e; margin-bottom: 20px; font-size: 0.9rem;">Join Beta to get 15 Days Free!</p>
-                <ul style="list-style: none; padding: 0; color: #aaa;">
-                    <li>Realistic Gmail Generator</li>
-                    <li>Deep GSF/DRM Masking</li>
-                    <li>VIP Priority Support</li>
+
+            <div class="card" style="text-align: center; border: 1px solid #6200EE; transform: scale(1.05); background: rgba(98, 0, 238, 0.05); z-index: 10;">
+                <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #6200EE; color: white; padding: 5px 15px; font-size: 0.8rem; border-radius: 0 0 10px 10px; font-weight: bold;">BEST VALUE</div>
+                
+                <h3 style="color: #6200EE; font-size: 1.3rem; text-transform: uppercase; margin-top: 20px; margin-bottom: 20px;">Professional</h3>
+                <div style="font-size: 3rem; font-weight: 800; color: white;">₹1599</div>
+                <div style="font-size: 1.3rem; color: #ccc; margin-bottom: 20px;">/ $18 USD</div>
+                <div style="background: rgba(98, 0, 238, 0.2); color: #b388ff; padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 30px; font-size: 0.9rem; font-weight: bold;">1 Month Validity</div>
+                
+                <ul style="list-style: none; text-align: left; margin-bottom: 30px; color: white; line-height: 2;">
+                    <li><i class="fas fa-check-circle" style="color: #03DAC6; margin-right: 10px;"></i> <strong>Everything in Starter</strong></li>
+                    <li><i class="fas fa-check-circle" style="color: #03DAC6; margin-right: 10px;"></i> Premium Support</li>
+                    <li><i class="fas fa-check-circle" style="color: #03DAC6; margin-right: 10px;"></i> Private Group Access</li>
                 </ul>
+                <a href="https://t.me/miragespoofer_root" target="_blank" class="cta-btn" style="padding: 15px 40px;">Buy Premium</a>
+            </div>
+
+            <div class="card" style="text-align: center; border-top: 3px solid #ff4757;">
+                <h3 style="color: #ff4757; font-size: 1.1rem; text-transform: uppercase; margin-bottom: 20px;">Enterprise</h3>
+                <div style="font-size: 2.5rem; font-weight: 800; color: white;">₹4599</div>
+                <div style="font-size: 1.2rem; color: #888; margin-bottom: 20px;">/ $51 USD</div>
+                <div style="background: #222; padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 30px; font-size: 0.9rem;">3 Months Validity</div>
+                
+                <ul style="list-style: none; text-align: left; margin-bottom: 30px; color: #ccc; line-height: 2;">
+                    <li><i class="fas fa-check" style="color: #ff4757; margin-right: 10px;"></i> Long Term Validity</li>
+                    <li><i class="fas fa-check" style="color: #ff4757; margin-right: 10px;"></i> Bulk Key Discount</li>
+                    <li><i class="fas fa-check" style="color: #ff4757; margin-right: 10px;"></i> Priority Bug Fixes</li>
+                </ul>
+                <a href="https://t.me/miragespoofer_root" target="_blank" class="cta-btn" style="padding: 12px 30px; font-size: 0.9rem; background: #333; box-shadow: none;">Buy Key</a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <div class="contact-card">
-            <h2>Join the Community</h2>
-            <p style="margin-bottom: 20px; color: #aaa;">Get instant updates, custom builds, and 24/7 support.</p>
-            <a href="https://t.me/miragespoofer_root" target="_blank" class="btn-telegram">
-                <i class="fab fa-telegram-plane"></i> Join Telegram Group
-            </a>
-        </div>
-    </section>
+    <footer>
+        <p>&copy; 2024 Mirage Spoofer Project. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; color: #444;">For Educational & Security Research Purposes Only.</p>
+    </footer>
 
 </body>
 </html>
