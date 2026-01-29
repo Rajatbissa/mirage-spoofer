@@ -2,7 +2,7 @@
     --neon-purple: #6200EE;
     --neon-cyan: #03DAC6;
     --dark-void: #020202;
-    --glass: rgba(255, 255, 255, 0.05);
+    --glass: rgba(255, 255, 255, 0.08);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -10,97 +10,67 @@ body {
     background: var(--dark-void);
     color: #fff;
     font-family: 'Rajdhani', sans-serif;
-    overflow-x: hidden;
+    line-height: 1.6;
 }
 
-/* 3D Background Glow */
+/* Visibility Fix: Clear Background Glow */
 .bg-glow {
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(98,0,238,0.2) 0%, transparent 70%);
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(98,0,238,0.15) 0%, transparent 80%);
     z-index: -1;
-    filter: blur(80px);
-    animation: pulse 8s infinite alternate;
-}
-
-@keyframes pulse {
-    from { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-    to { transform: translate(-50%, -50%) scale(1.5); opacity: 0.8; }
 }
 
 nav {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 30px 6%; position: fixed; width: 100%; top: 0; z-index: 100;
+    padding: 20px 6%; background: rgba(0,0,0,0.8);
+    position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222;
 }
 
-.logo { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1.8rem; letter-spacing: 4px; }
-.logo span { color: var(--neon-purple); text-shadow: 0 0 10px var(--neon-purple); }
+.logo { font-family: 'Orbitron'; font-weight: 900; letter-spacing: 2px; }
+.logo span { color: var(--neon-purple); }
 
-/* HERO SECTION */
-.hero {
-    height: 100vh; display: flex; flex-direction: column; 
-    justify-content: center; align-items: center; text-align: center;
-    padding: 0 10%;
+.nav-links a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; }
+
+/* Hero Section */
+.hero { padding: 100px 5%; text-align: center; }
+.glitch-text { font-family: 'Orbitron'; font-size: 4.5rem; letter-spacing: 5px; margin-bottom: 10px; }
+.hero-sub { color: #aaa; font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; }
+
+/* 3D Buttons */
+.main-actions { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.btn-3d { 
+    text-decoration: none; color: #fff; background: #111; 
+    padding: 20px 40px; border-radius: 10px; border: 1px solid #333;
+    transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
+.apk { border-bottom: 4px solid var(--neon-purple); }
+.module { border-bottom: 4px solid var(--neon-cyan); }
+.btn-3d:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(98,0,238,0.3); }
 
-.cyber-tag {
-    background: rgba(3, 218, 198, 0.1); color: var(--neon-cyan);
-    padding: 8px 25px; border-radius: 2px; border: 1px solid var(--neon-cyan);
-    font-family: 'Orbitron'; font-size: 0.7rem; margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(3, 218, 198, 0.2);
-}
+/* Info Sections */
+.info-section { padding: 80px 10%; text-align: center; }
+.section-title { font-family: 'Orbitron'; font-size: 2.5rem; margin-bottom: 40px; }
+.section-title span { color: var(--neon-purple); }
 
-.glitch-text {
-    font-family: 'Orbitron', sans-serif; font-size: 5rem; font-weight: 900;
-    letter-spacing: 10px; margin-bottom: 20px; position: relative;
-    text-shadow: 0 0 20px rgba(255,255,255,0.1);
-}
+/* Comparison Grid */
+.comparison-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+.comp-card { background: var(--glass); padding: 40px; border-radius: 20px; border: 1px solid #222; width: 350px; }
+.premium { border: 1px solid var(--neon-purple); background: rgba(98,0,238,0.05); position: relative; }
+.best-tag { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--neon-purple); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+.comp-card ul { list-style: none; text-align: left; margin-top: 20px; }
+.comp-card li { margin-bottom: 15px; font-size: 1.1rem; }
+.comp-card i { margin-right: 10px; }
 
-/* 3D BUTTONS SYSTEM */
-.main-actions { display: flex; gap: 40px; margin-top: 50px; }
+/* Pricing */
+.pricing-container { display: flex; gap: 25px; justify-content: center; flex-wrap: wrap; }
+.price-box { background: #111; padding: 40px; border-radius: 20px; border: 1px solid #333; width: 300px; }
+.featured { border-color: var(--neon-cyan); transform: scale(1.05); }
+.amt { font-size: 2.5rem; font-weight: 900; margin: 15px 0; }
+.amt span { font-size: 1rem; color: #777; }
+.buy-btn { display: block; padding: 15px; background: var(--neon-purple); color: #fff; text-decoration: none; border-radius: 10px; font-weight: bold; margin-top: 20px; }
 
-.btn-3d {
-    position: relative; width: 280px; height: 80px;
-    text-decoration: none; color: white;
-    perspective: 1000px;
-}
+footer { padding: 40px; text-align: center; border-top: 1px solid #222; color: #444; }
 
-.btn-content {
-    position: absolute; width: 100%; height: 100%;
-    background: linear-gradient(135deg, #1a1a1a, #000);
-    border: 1px solid #333; border-radius: 12px;
-    display: flex; align-items: center; justify-content: center; gap: 15px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 2; transform-style: preserve-3d;
-}
-
-.apk .btn-content { border-bottom: 4px solid var(--neon-purple); }
-.module .btn-content { border-bottom: 4px solid var(--neon-cyan); }
-
-.btn-3d:hover .btn-content {
-    transform: rotateX(15deg) translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-}
-
-.apk:hover .btn-content { border-color: var(--neon-purple); box-shadow: 0 10px 30px rgba(98,0,238,0.3); }
-.module:hover .btn-content { border-color: var(--neon-cyan); box-shadow: 0 10px 30px rgba(3,218,198,0.3); }
-
-.btn-content i { font-size: 2rem; }
-.btn-content span { display: flex; flex-direction: column; text-align: left; font-weight: 700; font-size: 1.1rem; }
-.btn-content small { font-size: 0.6rem; color: #888; text-transform: uppercase; }
-
-/* Status Bar */
-.status-bar {
-    margin-top: 60px; display: flex; gap: 30px;
-    font-family: 'Orbitron'; font-size: 0.8rem; color: #555;
-}
-.status-bar i { margin-right: 8px; color: var(--neon-cyan); }
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
-    .glitch-text { font-size: 2.5rem; letter-spacing: 5px; }
-    .main-actions { flex-direction: column; gap: 20px; }
-    .hero { padding-top: 100px; }
+    .glitch-text { font-size: 2.5rem; }
 }
