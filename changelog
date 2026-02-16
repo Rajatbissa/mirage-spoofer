@@ -1,0 +1,5 @@
+v12.0 Changelog:
+- Added Targeted Proxy (UID Based)
+- Fixed Folder A/B Export Logic
+- Improved Switching Speed
+- DNS Leak Protection Added
