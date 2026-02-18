@@ -1,5 +1,12 @@
-v12.0 Changelog:
-- Added Targeted Proxy (UID Based)
-- Fixed Folder A/B Export Logic
-- Improved Switching Speed
-- DNS Leak Protection Added
+⚙️ MirageHelper v2.0 - Core Engine Update
+⚡ Ultra-Fast Commands: mirage.cmd execution ab pehle se kahin zyada fast hai, no more waiting.
+
+🧹 Deep Cleaning: Swiggy aur Uber ke liye specialised cache aur datastore wiper add kiya gaya hai.
+
+🔑 GMS reset: Har profile switch par Google Advertising ID ka purana data auto-clear hoga.
+
+🔓 Permission Fix: Boot hote hi config files ko 666 permission milti hai taaki hook kabhi miss na ho.
+
+📦 Better Backups: tar compression ko optimise kiya gaya hai fast backup aur restore ke liye.
+
+🌐 Stealth Proxy: IPTables logic ko update kiya gaya hai, better stability aur privacy ke liye.
