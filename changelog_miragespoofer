@@ -1,0 +1,14 @@
+🚀 Mirage Ultra v1.0 | Official Stable Release
+
+🔥 Key Features (Kya hai Khaas?):
+🛡️ Advanced Root Hide (Deep Sync): Ab aapka device ekdum "Non-Rooted" dikhega. Humne root detection ko bypass karne ke liye Deep Config Sync add kiya hai jo root ko apps se puri tarah chhupa deta hai.
+
+📦 Hide My Applist (HMA Integration): Ab koi bhi app ye nahi jaan payegi ki aapne apne phone mein kaunsi dusri apps (like Magisk, LSPosed) install kar rakhi hain. Ekdum clean list!
+
+🤖 Mirage Helper Support: Hamara special Mirage Helper module ab aur bhi fast hai. Ye system settings aur hardware info ko background mein handle karta hai bina kisi lag ke.
+
+🌍 Mock GPS with Timezone Sync: Sirf location hi nahi, ab aapka Timezone bhi location ke saath automatic sync hoga. Agar location New York ki hai, toh phone ka waqt bhi wahi ka dikhega. Ekdum legit!
+
+📱 Legit Device Identity: Device ID, IMEI, aur Hardware info ko aise spoof kiya gaya hai ki server ko lagega aap ek real, unmodified device use kar rahe hain.
+
+🔐 Multi-Device Security: Ek account, ek device policy. Aapka data aur subscription ab pehle se zyada secure hai.
