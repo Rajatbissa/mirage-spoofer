@@ -1,12 +1,24 @@
-⚙️ MirageHelper v2.0 - Core Engine Update
-⚡ Ultra-Fast Commands: mirage.cmd execution ab pehle se kahin zyada fast hai, no more waiting.
+🚀 Mirage Helper v3.0 (Stable)
 
-🧹 Deep Cleaning: Swiggy aur Uber ke liye specialised cache aur datastore wiper add kiya gaya hai.
+The Ultimate Identity Overhaul 🛡️
 
-🔑 GMS reset: Har profile switch par Google Advertising ID ka purana data auto-clear hoga.
 
-🔓 Permission Fix: Boot hote hi config files ko 666 permission milti hai taaki hook kabhi miss na ho.
+✨ Key Improvements
+🛡️ Secure ID Engine: SecureRandom logic se 16-character genuine Android IDs (No more "fffffff" errors).
 
-📦 Better Backups: tar compression ko optimise kiya gaya hai fast backup aur restore ke liye.
+⚡ Zero Lag Startup: Background JSON loading se app opening speed 2x fast.
 
-🌐 Stealth Proxy: IPTables logic ko update kiya gaya hai, better stability aur privacy ke liye.
+🚫 Native Crash Fix: Aggressive force-stop aur pkill logic se Uber/Swiggy crashes khatam.
+
+🔋 Battery Optimized: Xposed hooks ko refine kiya gaya hai taaki background drain na ho.
+
+🔐 Mirage Vault: ContentProvider ko lock kiya gaya hai (Only Mirage can access data).
+
+🗺️ Map Ban Prevention: OSM tiles ke liye custom User-Agent implement ho gaya hai.
+
+🛠️ Technical Fixes
+Root Ops: Bulk Restore mein shell flooding fix aur Background thread par Quick Randomize.
+
+UI/UX: Widget debounce (1s cooldown) aur Lifecycle memory leak patches.
+
+Sync: Handshake protocol update for seamless profile switching.
