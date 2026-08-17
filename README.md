@@ -38,10 +38,11 @@ These show in Google as extra brand results. Code cannot create them.
 
 ### XDA
 
-Open one official thread titled **Mirage Spoofer** (Android, rooted, LSPosed). Link:
+Official thread: https://xdaforums.com/t/app-lsposed-mirage-spoofer-v21-38-rooted-android-identity-engine-magisk-kernelsu.4798588/
 
-- https://www.miragespoof.in/
-- https://github.com/Rajatbissa/mirage-spoofer
+### Softonic
+
+https://publishing-center.softonic.com/home — Upload or Claim. Do not create fake scrape pages.
 
 ### LSPosed module repo
 
