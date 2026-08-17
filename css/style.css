@@ -366,7 +366,7 @@ h1 span {
   animation: india-card-float 5s ease-in-out infinite;
 }
 .india-flag {
-  display: flex; align-items: stretch; height: 36px;
+  display: flex; align-items: stretch; height: 48px;
   transform-style: preserve-3d;
 }
 .flag-pole {
@@ -376,29 +376,12 @@ h1 span {
   z-index: 2;
 }
 .flag-cloth {
-  position: relative;
-  display: flex; width: 54px; height: 36px;
+  width: 72px; height: 48px;
   transform-origin: left center;
-  filter: drop-shadow(2px 3px 4px rgba(0,0,0,0.35));
+  filter: drop-shadow(2px 3px 5px rgba(0,0,0,0.38));
+  animation: india-flag-sway 2.2s ease-in-out infinite;
 }
-.flag-cloth i {
-  display: block; flex: 1 1 auto; font-style: normal;
-  background: linear-gradient(180deg, #FF9933 0 33.34%, #FFFFFF 33.34% 66.66%, #138808 66.66%);
-  transform-origin: left center;
-  animation: india-flag-wave 1.05s ease-in-out infinite;
-  animation-delay: calc(var(--i) * 0.07s);
-}
-.flag-cloth i:nth-child(odd) { filter: brightness(0.92); }
-.flag-chakra {
-  position: absolute; left: 50%; top: 50%;
-  width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px;
-  border: 1.5px solid #000080; border-radius: 50%;
-  pointer-events: none; z-index: 1;
-  box-shadow: inset 0 0 0 3.5px #fff, 0 0 0 1px rgba(0,0,128,0.15);
-}
-.flag-chakra:after {
-  content: ""; position: absolute; inset: 3px; border-radius: 50%; background: #000080;
-}
+.flag-cloth svg { display: block; width: 72px; height: 48px; }
 .india-copy { text-align: left; line-height: 1.15; }
 .india-copy span {
   display: block; font-size: 0.68rem; font-weight: 700;
@@ -412,13 +395,13 @@ h1 span {
   0%, 100% { transform: translate3d(0, 0, 0) rotateX(5deg) rotateY(-7deg); }
   50% { transform: translate3d(0, -10px, 16px) rotateX(7deg) rotateY(7deg); }
 }
-@keyframes india-flag-wave {
-  0%, 100% { transform: translateY(0) skewY(0deg) scaleY(1); }
-  25% { transform: translateY(-3px) skewY(7deg) scaleY(1.04); }
-  75% { transform: translateY(3px) skewY(-7deg) scaleY(0.97); }
+@keyframes india-flag-sway {
+  0%, 100% { transform: perspective(90px) rotateY(-6deg); }
+  50% { transform: perspective(90px) rotateY(10deg); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .india-float-card, .flag-cloth i { animation: none; }
+  .india-float-card, .flag-cloth { animation: none; }
+  .flag-cloth animate { display: none; }
 }
 .admin-box input, .admin-box textarea {
   width: 100%; min-height: 44px; margin: 8px 0 14px; border-radius: 12px; border: 1px solid var(--line);

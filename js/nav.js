@@ -57,14 +57,34 @@
     footer.insertBefore(brand, footer.firstChild);
   }
   if (footer && !footer.querySelector(".made-in-india")) {
-    var strips = "";
-    for (var i = 0; i < 16; i++) strips += '<i style="--i:' + i + '"></i>';
+    var spokes = "";
+    for (var s = 0; s < 24; s++) {
+      var a = (s * 15) * Math.PI / 180;
+      spokes += '<line x1="' + (45 + Math.sin(a) * 5.2).toFixed(2)
+        + '" y1="' + (30 - Math.cos(a) * 5.2).toFixed(2)
+        + '" x2="' + (45 + Math.sin(a) * 13.4).toFixed(2)
+        + '" y2="' + (30 - Math.cos(a) * 13.4).toFixed(2) + '"/>';
+    }
     var made = document.createElement("div");
     made.className = "made-in-india";
     made.setAttribute("aria-label", "Made in India");
     made.innerHTML = '<div class="india-float-card" aria-hidden="true">'
-      + '<div class="india-flag"><span class="flag-pole"></span><div class="flag-cloth">'
-      + strips + '<em class="flag-chakra"></em></div></div>'
+      + '<div class="india-flag"><span class="flag-pole"></span>'
+      + '<div class="flag-cloth"><svg viewBox="0 0 90 60" width="72" height="48">'
+      + '<defs><filter id="indiaFlagWind" x="-8%" y="-18%" width="120%" height="136%">'
+      + '<feTurbulence type="fractalNoise" baseFrequency="0.012 0.22" numOctaves="2" seed="3" result="n">'
+      + '<animate attributeName="baseFrequency" dur="2.2s" values="0.01 0.18;0.018 0.32;0.01 0.18" repeatCount="indefinite"/>'
+      + '</feTurbulence>'
+      + '<feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>'
+      + '</filter></defs>'
+      + '<g filter="url(#indiaFlagWind)">'
+      + '<rect width="90" height="20" fill="#FF9933"/>'
+      + '<rect y="20" width="90" height="20" fill="#FFFFFF"/>'
+      + '<rect y="40" width="90" height="20" fill="#138808"/>'
+      + '<g fill="none" stroke="#000080" stroke-width="1.2" stroke-linecap="round">'
+      + '<circle cx="45" cy="30" r="14.4"/>'
+      + '<circle cx="45" cy="30" r="3.1" fill="#000080" stroke="none"/>'
+      + spokes + '</g></g></svg></div></div>'
       + '<div class="india-copy"><span>Made in</span><strong>India</strong></div>'
       + '</div>';
     footer.appendChild(made);
