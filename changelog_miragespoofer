@@ -1,14 +1,8 @@
-Mirage Spoofer v21.37
+Mirage Spoofer v21.37 | Official
 
-Mirage Spoofer v21.37
+What's new:
+- Login and home screen stability fixes.
+- App opens and refreshes more reliably after install.
 
-versionCode: 93
-
-## What's new for you
-
-- Google Analytics on every app screen (same property as the website).
-- LSPosed Manager update check now follows GitHub Releases automatically.
-
-## Install
-
-Download `Mirage_Spoofer_v21.37.apk` below and install over your current official app.
+Download: https://www.miragespoof.in/
+Release: https://github.com/Rajatbissa/mirage-spoofer/releases/tag/v21.37
