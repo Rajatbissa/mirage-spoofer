@@ -28,7 +28,7 @@
 
   function asset(name) {
     var path = (location.pathname || "").replace(/\\/g, "/");
-    return /\/(legal|admin)(\/|$)/.test(path) ? "../" + name : name;
+    return /\/(legal|admin|docs)(\/|$)/.test(path) ? "../" + name : name;
   }
   document.querySelectorAll("a.logo").forEach(function (el) {
     var img = el.querySelector("img");

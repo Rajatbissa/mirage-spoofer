@@ -3,7 +3,7 @@ window.MIRAGE_SEARCH_INDEX = [
     title: "How to install Mirage Spoofer",
     url: "guide.html#install",
     tags: ["install", "setup", "apk", "download", "root", "helper", "root module"],
-    text: "Install Helper Magisk KernelSU root module then Mirage Spoofer v21.36 APK and allow root."
+    text: "Install Helper Magisk KernelSU root module then Mirage Spoofer v21.38 APK and allow root."
   },
   {
     title: "How to use Mirage Spoofer",
@@ -56,8 +56,56 @@ window.MIRAGE_SEARCH_INDEX = [
   {
     title: "Download APK and Helper",
     url: "download.html",
-    tags: ["download", "apk", "helper", "v21.36", "root module"],
-    text: "Official Mirage Spoofer v21.36 APK and Helper root module zip."
+    tags: ["download", "apk", "helper", "v21.38", "root module"],
+    text: "Official Mirage Spoofer v21.38 APK and Helper root module zip."
+  },
+  {
+    title: "Root module — Magisk Helper",
+    url: "root-module.html",
+    tags: ["root module", "helper", "magisk", "kernelsu"],
+    text: "Official Mirage Helper zip for Magisk or KernelSU. Install before the APK."
+  },
+  {
+    title: "Android identity spoofer",
+    url: "identity-spoofer.html",
+    tags: ["identity spoof", "spoofer", "imei", "android id", "ad-id"],
+    text: "Mirage Spoofer rooted Android identity spoofer: IMEI, Android ID, MAC, Ad-ID per profile."
+  },
+  {
+    title: "LSPosed setup",
+    url: "lsposed.html",
+    tags: ["lsposed", "xposed", "module", "scope"],
+    text: "Enable Mirage Spoofer in LSPosed and select target apps in scope."
+  },
+  {
+    title: "Mirage Spoofer APK",
+    url: "apk.html",
+    tags: ["apk", "download", "v21.38"],
+    text: "Official Mirage Spoofer APK v21.38 from GitHub."
+  },
+  {
+    title: "Docs hub",
+    url: "docs/",
+    tags: ["docs", "guide", "setup"],
+    text: "Mirage Spoofer documentation: setup, profiles, RTC."
+  },
+  {
+    title: "Setup docs",
+    url: "docs/setup.html",
+    tags: ["setup", "install", "root"],
+    text: "Setup: root, Helper module, APK, LSPosed."
+  },
+  {
+    title: "Profiles docs",
+    url: "docs/profiles.html",
+    tags: ["profiles", "bulk", "widget"],
+    text: "Bulk profiles, groups, floating widget switch."
+  },
+  {
+    title: "RTC docs",
+    url: "docs/rtc.html",
+    tags: ["rtc", "timezone", "gps"],
+    text: "Clock and timezone follow profile GPS location."
   },
   {
     title: "Pricing and license",
