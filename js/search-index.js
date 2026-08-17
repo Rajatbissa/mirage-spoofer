@@ -171,7 +171,7 @@ window.MIRAGE_SEARCH_INDEX = [
     title: "Pricing and license",
     url: "pricing.html",
     tags: ["pricing", "license", "recharge", "telegram", "lifetime"],
-    text: "Standard 15 days ₹1049, Professional 30 days ₹1599, Enterprise 90 days ₹4599 or $50. Limited Lifetime $1050, 3 seats. Buy via Telegram admin."
+    text: "Standard 15 days ₹1049, Professional 30 days ₹1599, Enterprise 90 days ₹4599 or $50. Limited Lifetime $1050, 5 seats. Buy via Telegram admin."
   },
   {
     title: "Plan expired — Profile still opens",
