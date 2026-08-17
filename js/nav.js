@@ -57,9 +57,18 @@
     footer.insertBefore(brand, footer.firstChild);
   }
   if (footer && !footer.querySelector(".made-in-india")) {
-    var made = document.createElement("p");
+    var made = document.createElement("div");
     made.className = "made-in-india";
-    made.innerHTML = '<span class="in-flag" aria-hidden="true"><svg viewBox="0 0 9 6" width="22" height="15"><rect width="9" height="2" fill="#FF9933"/><rect y="2" width="9" height="2" fill="#FFFFFF"/><rect y="4" width="9" height="2" fill="#138808"/><circle cx="4.5" cy="3" r="0.9" fill="none" stroke="#000080" stroke-width="0.18"/></svg></span> Made in India';
+    made.setAttribute("aria-label", "Made in India");
+    made.innerHTML = '<div class="india-balloon" aria-hidden="true">'
+      + '<div class="balloon-body">'
+      + '<span class="balloon-shine"></span>'
+      + '<span class="balloon-chakra"></span>'
+      + '<span class="balloon-text">Made in<br>India</span>'
+      + '</div>'
+      + '<span class="balloon-knot"></span>'
+      + '<span class="balloon-string"></span>'
+      + '</div>';
     footer.appendChild(made);
   }
 

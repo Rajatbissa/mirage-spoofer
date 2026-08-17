@@ -349,16 +349,75 @@ h1 span {
 .footer-brand img { width: 28px; height: 28px; object-fit: contain; border-radius: 6px; }
 .site-footer .fine { color: var(--danger); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.03em; }
 .made-in-india {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  margin: 18px 0 0; padding-top: 16px; border-top: 1px solid var(--line);
-  font-family: Outfit, sans-serif; font-weight: 800; letter-spacing: 0.08em;
-  text-transform: uppercase; font-size: 0.82rem; color: #f4f0ff;
+  display: flex; justify-content: center;
+  margin: 10px 0 -8px; padding-top: 22px; border-top: 1px solid var(--line);
+  perspective: 800px; min-height: 176px;
 }
-.made-in-india .in-flag {
-  display: inline-flex; width: 22px; height: 15px; border-radius: 2px;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.18); overflow: hidden; flex-shrink: 0;
+.india-balloon {
+  display: flex; flex-direction: column; align-items: center;
+  transform-style: preserve-3d;
+  animation: india-float 4.4s ease-in-out infinite;
+  filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.38));
 }
-.made-in-india .in-flag svg { display: block; width: 22px; height: 15px; }
+.balloon-body {
+  position: relative;
+  width: 96px; height: 116px;
+  border-radius: 50% 50% 48% 48% / 40% 40% 60% 60%;
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255,255,255,0.62), transparent 26%),
+    linear-gradient(180deg, #FF9933 0 33%, #FFFFFF 33% 67%, #138808 67% 100%);
+  box-shadow:
+    inset -16px -12px 24px rgba(0,0,0,0.28),
+    inset 12px 14px 20px rgba(255,255,255,0.3),
+    0 0 0 1px rgba(255,255,255,0.12);
+  display: grid; place-items: center;
+  transform: rotateX(8deg) rotateY(-12deg);
+}
+.balloon-shine {
+  position: absolute; left: 18%; top: 14%;
+  width: 22px; height: 16px; border-radius: 50%;
+  background: rgba(255,255,255,0.55); filter: blur(1px);
+  pointer-events: none;
+}
+.balloon-chakra {
+  position: absolute; width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid #000080; opacity: 0.9;
+  box-shadow: 0 0 0 3px rgba(0,0,128,0.08);
+}
+.balloon-chakra:before {
+  content: ""; position: absolute; inset: 5px; border-radius: 50%; background: #000080;
+}
+.balloon-text {
+  position: relative; z-index: 1;
+  font-family: Outfit, sans-serif; font-weight: 900;
+  font-size: 0.58rem; letter-spacing: 0.06em; line-height: 1.15;
+  text-align: center; text-transform: uppercase; color: #000080;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.7);
+  margin-top: 22px;
+}
+.balloon-knot {
+  width: 12px; height: 10px; margin-top: -3px;
+  background: linear-gradient(180deg, #e8892a, #c45f10);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.balloon-string {
+  width: 2px; height: 38px;
+  background: linear-gradient(180deg, #d4c6ff, #7C4DFF 70%, transparent);
+  border-radius: 2px;
+  transform-origin: top center;
+  animation: india-string 4.4s ease-in-out infinite;
+}
+@keyframes india-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotateZ(-6deg) rotateY(-10deg); }
+  50% { transform: translate3d(8px, -18px, 24px) rotateZ(6deg) rotateY(10deg); }
+}
+@keyframes india-string {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .india-balloon, .balloon-string { animation: none; }
+}
 .admin-box input, .admin-box textarea {
   width: 100%; min-height: 44px; margin: 8px 0 14px; border-radius: 12px; border: 1px solid var(--line);
   background: var(--bg-2); color: #fff; padding: 10px 12px; font: inherit;
