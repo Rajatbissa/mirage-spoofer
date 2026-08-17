@@ -85,17 +85,4 @@
     var svg = ico[navKey(link.getAttribute("href"))];
     if (svg) link.insertAdjacentHTML("afterbegin", svg);
   });
-
-  var live = document.querySelector("[data-plan-live]");
-  document.querySelectorAll(".plan-opt").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      document.querySelectorAll(".plan-opt").forEach(function (el) { el.classList.remove("is-on"); });
-      btn.classList.add("is-on");
-      if (!live) return;
-      var usd = btn.getAttribute("data-usd");
-      live.innerHTML = "₹" + btn.getAttribute("data-inr") +
-        (usd ? ' <small>/ $' + usd + "</small>" : "") +
-        " <small>/ " + btn.getAttribute("data-days") + " days</small>";
-    });
-  });
 })();
