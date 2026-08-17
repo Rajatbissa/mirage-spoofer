@@ -32,7 +32,7 @@ window.MIRAGE_SEARCH_INDEX = [
   {
     title: "RTC — clock and timezone",
     url: "guide.html#rtc",
-    tags: ["rtc", "clock", "timezone", "gps", "location", "time"],
+    tags: ["rtc", "clock", "timezone", "gps", "location", "time", "spoof location with timezone"],
     text: "RTC and timezone stay in sync with the profile GPS location so the clock matches the selected region."
   },
   {
@@ -104,8 +104,38 @@ window.MIRAGE_SEARCH_INDEX = [
   {
     title: "RTC docs",
     url: "docs/rtc.html",
-    tags: ["rtc", "timezone", "gps"],
+    tags: ["rtc", "timezone", "gps", "spoof location"],
     text: "Clock and timezone follow profile GPS location."
+  },
+  {
+    title: "Spoof location",
+    url: "spoof-location.html",
+    tags: ["spoof location", "gps", "location", "fake gps"],
+    text: "Spoof location per profile on the map. Target apps see that GPS."
+  },
+  {
+    title: "Spoof location with timezone",
+    url: "location-timezone.html",
+    tags: ["spoof location with timezone", "timezone", "rtc", "gps"],
+    text: "Spoof location with timezone so clock and GPS stay in the same region."
+  },
+  {
+    title: "Proxy connect",
+    url: "proxy.html",
+    tags: ["proxy connect", "proxy", "socks", "http"],
+    text: "Proxy connect per profile: host, port, type, login. Helper turns proxy on at switch."
+  },
+  {
+    title: "VPN",
+    url: "vpn.html",
+    tags: ["vpn", "tunnel", "proxy vpn"],
+    text: "VPN tunnel for proxy connect. Hidden from target apps. Not a consumer VPN plan."
+  },
+  {
+    title: "Spoof IP",
+    url: "spoof-ip.html",
+    tags: ["spoof ip", "spoof IP", "ip", "proxy ip", "fake ip"],
+    text: "Spoof IP through proxy connect so apps see the proxy exit, not your real IP."
   },
   {
     title: "Pricing and license",

@@ -36,7 +36,8 @@
       {"@type":"Question","name":"Why is the Helper root module required?","acceptedAnswer":{"@type":"Answer","text":"Install the Magisk or KernelSU Helper zip first. Without the root module the app can crash."}},
       {"@type":"Question","name":"Do I need root?","acceptedAnswer":{"@type":"Answer","text":"Yes. Magisk or KernelSU root is required."}},
       {"@type":"Question","name":"What does the spoofer do?","acceptedAnswer":{"@type":"Answer","text":"Each profile gets unique IDs such as IMEI, Android ID, MAC, Ad-ID, and model."}},
-      {"@type":"Question","name":"What is RTC in Mirage Spoofer?","acceptedAnswer":{"@type":"Answer","text":"RTC means the phone clock and timezone stay in sync with the profile GPS location."}},
+      {"@type":"Question","name":"What is RTC in Mirage Spoofer?","acceptedAnswer":{"@type":"Answer","text":"RTC means you spoof location with timezone: the clock stays in sync with the profile GPS."}},
+      {"@type":"Question","name":"Can I spoof location, proxy connect, VPN, and spoof IP?","acceptedAnswer":{"@type":"Answer","text":"Yes. Spoof location is GPS per profile. Timezone follows that pin. Proxy connect routes traffic so you spoof IP. The Helper VPN tunnel is hidden from target apps. See https://www.miragespoof.in/spoof-location.html and https://www.miragespoof.in/proxy.html"}},
       {"@type":"Question","name":"What happens when my plan expires?","acceptedAnswer":{"@type":"Answer","text":"You can still open the app and check Profile. Home and Group stay available to browse. Recharge unlocks full access."}},
       {"@type":"Question","name":"How do I get a license?","acceptedAnswer":{"@type":"Answer","text":"Buy via Telegram admin @Miragespoofer. Plans are listed on https://www.miragespoof.in/pricing.html"}}
     ]
@@ -104,8 +105,13 @@
         </details>
         <details>
           <summary>What is RTC?</summary>
-          <p>Clock / timezone stay in sync with the profile GPS. See the <a href="guide.html#rtc">RTC guide</a>.</p>
+          <p>Clock / timezone stay in sync with the profile GPS. That is <a href="location-timezone.html">spoof location with timezone</a>.</p>
           <p class="hi">Clock / timezone profile GPS ke saath sync.</p>
+        </details>
+        <details>
+          <summary>Spoof location, proxy, VPN, spoof IP?</summary>
+          <p><a href="spoof-location.html">Spoof location</a> is GPS. <a href="proxy.html">Proxy connect</a> changes the IP (<a href="spoof-ip.html">spoof IP</a>). The <a href="vpn.html">VPN</a> page explains the hidden tunnel — not a consumer VPN plan.</p>
+          <p class="hi">Location GPS se. IP proxy se. VPN tunnel hide hota hai.</p>
         </details>
         <details id="expired">
           <summary>What happens when my plan expires?</summary>
