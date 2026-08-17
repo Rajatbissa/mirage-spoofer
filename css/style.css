@@ -354,31 +354,24 @@ h1 span {
   perspective: 900px;
 }
 .india-float-card {
-  display: flex; align-items: center; gap: 14px;
-  padding: 12px 18px 12px 14px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 20px;
   border-radius: 16px;
   background: linear-gradient(160deg, rgba(56, 42, 88, 0.95), rgba(22, 16, 42, 0.96));
   border: 1px solid rgba(255,255,255,0.12);
   box-shadow:
     0 18px 36px rgba(0,0,0,0.32),
     inset 0 1px 0 rgba(255,255,255,0.12);
+  font-family: Outfit, sans-serif; font-weight: 800; letter-spacing: 0.08em;
+  text-transform: uppercase; font-size: 0.82rem; color: #f4f0ff;
   transform-style: preserve-3d;
   animation: india-card-float 5s ease-in-out infinite;
 }
 .in-flag {
-  display: inline-flex; width: 28px; height: 19px; border-radius: 3px;
+  display: inline-flex; width: 22px; height: 15px; border-radius: 2px;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.18); overflow: hidden; flex-shrink: 0;
 }
-.in-flag svg { display: block; width: 28px; height: 19px; }
-.india-copy { text-align: left; line-height: 1.15; }
-.india-copy span {
-  display: block; font-size: 0.68rem; font-weight: 700;
-  letter-spacing: 0.08em; text-transform: uppercase; color: #b7aee0;
-}
-.india-copy strong {
-  display: block; font-family: Outfit, sans-serif; font-weight: 900;
-  font-size: 1.15rem; letter-spacing: 0.04em; color: #fff;
-}
+.in-flag svg { display: block; width: 22px; height: 15px; }
 @keyframes india-card-float {
   0%, 100% { transform: translate3d(0, 0, 0) rotateX(5deg) rotateY(-7deg); }
   50% { transform: translate3d(0, -10px, 16px) rotateX(7deg) rotateY(7deg); }

@@ -61,13 +61,12 @@
     made.className = "made-in-india";
     made.setAttribute("aria-label", "Made in India");
     made.innerHTML = '<div class="india-float-card">'
-      + '<span class="in-flag" aria-hidden="true"><svg viewBox="0 0 9 6" width="28" height="19">'
+      + '<span class="in-flag" aria-hidden="true"><svg viewBox="0 0 9 6" width="22" height="15">'
       + '<rect width="9" height="2" fill="#FF9933"/>'
       + '<rect y="2" width="9" height="2" fill="#FFFFFF"/>'
       + '<rect y="4" width="9" height="2" fill="#138808"/>'
       + '<circle cx="4.5" cy="3" r="0.9" fill="none" stroke="#000080" stroke-width="0.18"/>'
-      + '</svg></span>'
-      + '<div class="india-copy"><span>Made in</span><strong>India</strong></div>'
+      + '</svg></span> Made in India'
       + '</div>';
     footer.appendChild(made);
   }
