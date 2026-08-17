@@ -377,9 +377,8 @@ h1 span {
 }
 .flag-cloth {
   width: 72px; height: 48px;
-  transform-origin: left center;
-  filter: drop-shadow(2px 3px 5px rgba(0,0,0,0.38));
-  animation: india-flag-sway 2.2s ease-in-out infinite;
+  overflow: hidden;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.35);
 }
 .flag-cloth svg { display: block; width: 72px; height: 48px; }
 .india-copy { text-align: left; line-height: 1.15; }
@@ -395,13 +394,8 @@ h1 span {
   0%, 100% { transform: translate3d(0, 0, 0) rotateX(5deg) rotateY(-7deg); }
   50% { transform: translate3d(0, -10px, 16px) rotateX(7deg) rotateY(7deg); }
 }
-@keyframes india-flag-sway {
-  0%, 100% { transform: perspective(90px) rotateY(-6deg); }
-  50% { transform: perspective(90px) rotateY(10deg); }
-}
 @media (prefers-reduced-motion: reduce) {
-  .india-float-card, .flag-cloth { animation: none; }
-  .flag-cloth animate { display: none; }
+  .india-float-card { animation: none; }
 }
 .admin-box input, .admin-box textarea {
   width: 100%; min-height: 44px; margin: 8px 0 14px; border-radius: 12px; border: 1px solid var(--line);
