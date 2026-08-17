@@ -79,37 +79,10 @@ a { color: var(--primary-2); }
   padding: 10px 12px; border-radius: 10px; min-height: 44px; display: inline-flex; align-items: center; gap: 7px;
 }
 .nav-drawer a:hover, .nav-drawer a.is-active { color: #fff; background: rgba(124, 77, 255, 0.22); }
-.nav-drawer a:not(.btn-ghost):not(.btn-solid)::before {
-  content: "";
-  width: 15px; height: 15px; flex-shrink: 0;
-  background: currentColor;
-  -webkit-mask: center / contain no-repeat;
-  mask: center / contain no-repeat;
-}
-.nav-drawer a[href$="index.html"]::before,
-.nav-drawer a[href="./"]::before {
-  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z'/></svg>");
-  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z'/></svg>");
-}
-.nav-drawer a[href$="features.html"]::before {
-  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><rect x='3' y='3' width='7' height='7' rx='1'/><rect x='14' y='3' width='7' height='7' rx='1'/><rect x='3' y='14' width='7' height='7' rx='1'/><rect x='14' y='14' width='7' height='7' rx='1'/></svg>");
-  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><rect x='3' y='3' width='7' height='7' rx='1'/><rect x='14' y='3' width='7' height='7' rx='1'/><rect x='3' y='14' width='7' height='7' rx='1'/><rect x='14' y='14' width='7' height='7' rx='1'/></svg>");
-}
-.nav-drawer a[href$="guide.html"]::before {
-  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg>");
-  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg>");
-}
-.nav-drawer a[href$="download.html"]::before {
-  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M12 3v12'/><path d='m7 10 5 5 5-5'/><path d='M5 21h14'/></svg>");
-  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M12 3v12'/><path d='m7 10 5 5 5-5'/><path d='M5 21h14'/></svg>");
-}
-.nav-drawer a[href$="pricing.html"]::before {
-  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M12 1v22'/><path d='M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'/></svg>");
-  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><path d='M12 1v22'/><path d='M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'/></svg>");
-}
-.nav-drawer a[href$="faq.html"]::before {
-  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><circle cx='12' cy='12' r='10'/><path d='M9.1 9a3 3 0 1 1 5.8 1c0 2-3 2-3 4'/><path d='M12 17h.01'/></svg>");
-  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><circle cx='12' cy='12' r='10'/><path d='M9.1 9a3 3 0 1 1 5.8 1c0 2-3 2-3 4'/><path d='M12 17h.01'/></svg>");
+.nav-ico {
+  width: 16px; height: 16px; flex-shrink: 0;
+  display: block; fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
 }
 .btn-ghost, .btn-solid, .btn-danger, .btn-main {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
@@ -126,7 +99,7 @@ a { color: var(--primary-2); }
 }
 
 .hero {
-  display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.9fr) 300px;
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, 1fr);
   gap: 22px; align-items: center;
   padding: 36px 0 20px;
   position: relative;
@@ -305,8 +278,21 @@ h1 span {
 .news-list { list-style: none; padding: 0; max-width: 760px; margin: 0 auto; }
 .news-list li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; }
 
+.price-layout {
+  display: grid; grid-template-columns: 1fr;
+  gap: 28px; align-items: start;
+}
 .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
-.price-card.pro { border: 2px solid var(--primary); transform: translateY(-6px); position: relative; }
+.ico svg {
+  width: 20px; height: 20px; display: block;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.price-card .ico {
+  width: 42px; height: 42px; display: grid; place-items: center;
+  border-radius: 12px; margin-bottom: 12px;
+  background: rgba(0, 229, 255, 0.12); color: var(--primary-2);
+}
 .hot {
   position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
   background: var(--pink); padding: 4px 12px; border-radius: 999px; font-size: 0.72rem; font-weight: 800;
@@ -366,11 +352,7 @@ h1 span {
   .buy-card { text-align: left; }
   .tech-row { justify-content: center; }
   .hero-actions, .hero-stats { justify-content: center; }
-}
-
-@media (min-width: 901px) and (max-width: 1120px) {
-  .hero { grid-template-columns: 1fr 280px; }
-  .hero-visual { grid-column: 1 / -1; height: 380px; }
+  .price-layout { grid-template-columns: 1fr; }
 }
 
 .fx-orbs {
@@ -441,7 +423,11 @@ h1 span {
 .tech-tile small { color: var(--muted); font-size: 0.72rem; }
 
 .buy-card {
-  position: relative; z-index: 2;
+  position: relative;
+  z-index: 2;
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
   background: linear-gradient(180deg, rgba(40, 30, 70, 0.92), rgba(22, 16, 42, 0.95));
   border: 1px solid rgba(124, 77, 255, 0.45);
   border-radius: 22px;
@@ -479,6 +465,8 @@ h1 span {
   box-shadow: 0 18px 40px rgba(0,0,0,0.28);
 }
 .price-card.pro {
+  position: relative;
+  transform: translateY(-6px);
   border-color: var(--primary);
   box-shadow: 0 0 0 1px var(--primary), 0 20px 50px rgba(124, 77, 255, 0.22);
 }
