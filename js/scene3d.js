@@ -112,6 +112,26 @@ import { RoundedBoxGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/e
     phone.position.y = 0.12;
     stage.add(phone);
 
+    function glowBall(color, r) {
+      var m = new THREE.Mesh(
+        new THREE.SphereGeometry(r, reducedQuality ? 16 : 32, reducedQuality ? 16 : 32),
+        new THREE.MeshPhysicalMaterial({
+          color: color,
+          emissive: color,
+          emissiveIntensity: 0.85,
+          roughness: 0.18,
+          metalness: 0.15,
+          transparent: true,
+          opacity: 0.92
+        })
+      );
+      stage.add(m);
+      return m;
+    }
+    var ballA = glowBall(0x7c4dff, 0.2);
+    var ballB = glowBall(0x00e5ff, 0.14);
+    var ballC = glowBall(0xff2e9f, 0.11);
+
     function satellite(map, x, y, z, rotY) {
       var g = new THREE.Group();
       var frame = new THREE.Mesh(
@@ -172,6 +192,9 @@ import { RoundedBoxGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/e
         rightCard.position.y = -0.15 + Math.cos(t * 0.7) * 0.12;
         rightCard.rotation.z = Math.cos(t * 0.45) * 0.04;
       }
+      ballA.position.set(Math.cos(t * 0.7) * 1.7, 1.15 + Math.sin(t * 0.9) * 0.25, Math.sin(t * 0.7) * 0.6);
+      ballB.position.set(Math.cos(t * 0.55 + 2) * 1.5, -0.9 + Math.cos(t * 0.8) * 0.2, Math.sin(t * 0.55 + 2) * 0.7);
+      ballC.position.set(Math.sin(t * 0.65) * 1.1, 0.35 + Math.cos(t * 1.1) * 0.35, 0.9 + Math.sin(t * 0.4) * 0.2);
       renderer.render(scene, camera);
     }
     tick();

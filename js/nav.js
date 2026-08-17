@@ -51,4 +51,25 @@
     brand.innerHTML = '<img src="' + asset("logo-mark.png") + '" width="28" height="28" alt=""> <strong>Mirage Spoofer</strong>';
     footer.insertBefore(brand, footer.firstChild);
   }
+
+  if (!document.querySelector(".fx-orbs")) {
+    var orbs = document.createElement("div");
+    orbs.className = "fx-orbs";
+    orbs.setAttribute("aria-hidden", "true");
+    orbs.innerHTML = '<span class="orb orb-a"></span><span class="orb orb-b"></span><span class="orb orb-c"></span>';
+    document.body.insertBefore(orbs, document.body.firstChild);
+  }
+
+  var live = document.querySelector("[data-plan-live]");
+  document.querySelectorAll(".plan-opt").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll(".plan-opt").forEach(function (el) { el.classList.remove("is-on"); });
+      btn.classList.add("is-on");
+      if (!live) return;
+      var usd = btn.getAttribute("data-usd");
+      live.innerHTML = "₹" + btn.getAttribute("data-inr") +
+        (usd ? ' <small>/ $' + usd + "</small>" : "") +
+        " <small>/ " + btn.getAttribute("data-days") + " days</small>";
+    });
+  });
 })();

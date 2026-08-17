@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=23">
+  <link rel="stylesheet" href="css/style.css?v=24">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -78,7 +78,8 @@
         "offers": [
           {"@type":"Offer","name":"Standard 15 days","price":"1049","priceCurrency":"INR","url":"https://www.miragespoof.in/pricing.html"},
           {"@type":"Offer","name":"Professional 30 days","price":"1599","priceCurrency":"INR","url":"https://www.miragespoof.in/pricing.html"},
-          {"@type":"Offer","name":"Enterprise 90 days","price":"4599","priceCurrency":"INR","url":"https://www.miragespoof.in/pricing.html"}
+          {"@type":"Offer","name":"Enterprise 90 days","price":"4599","priceCurrency":"INR","url":"https://www.miragespoof.in/pricing.html"},
+          {"@type":"Offer","name":"Enterprise 90 days USD","price":"50","priceCurrency":"USD","url":"https://www.miragespoof.in/pricing.html"}
         ]
       }
     ]
@@ -108,11 +109,33 @@
 
   <main id="main">
     <section class="hero wrap">
+      <div class="hero-watermark" aria-hidden="true">MIRAGE SPOOFER</div>
       <div class="hero-copy">
-        <span class="badge">MIRAGE v21.36 OFFICIAL</span>
-        <h1>The Ultimate <span>Identity Engine.</span></h1>
-        <p class="lead">Official Mirage Spoofer for rooted Android. Bulk profiles, floating widget, backup and restore — with the Helper root module.</p>
+        <div class="hero-pills">
+          <span class="pill"><span class="dot"></span> ROOTED ANDROID</span>
+          <span class="pill">v21.36 OFFICIAL</span>
+        </div>
+        <h1>Start fresh with <span>Mirage Spoofer</span></h1>
+        <p class="lead">Official identity engine for rooted Android. Bulk profiles, floating widget, backup and restore — with the Helper root module.</p>
         <p class="hi">Rooted Android ke liye official Mirage Spoofer. Bulk profiles, floating widget, backup aur restore — Helper root module ke saath.</p>
+        <div class="tech-row">
+          <div class="tech-tile">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 7h2"/></svg></span>
+            <div><b>Root module</b><small>Magisk / KernelSU</small></div>
+          </div>
+          <div class="tech-tile">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4"/><circle cx="12" cy="14" r="8"/><path d="M12 10v4l2 2"/></svg></span>
+            <div><b>Unique IDs</b><small>IMEI · MAC · Ad-ID</small></div>
+          </div>
+          <div class="tech-tile">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>
+            <div><b>Floating widget</b><small>Switch in-app</small></div>
+          </div>
+          <div class="tech-tile">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <div><b>RTC sync</b><small>Clock + timezone</small></div>
+          </div>
+        </div>
         <div class="hero-actions">
           <a class="btn-main" href="https://github.com/Rajatbissa/mirage-spoofer/releases/download/v21.36/Mirage_Spoofer_v21.36.apk">Download APK</a>
           <a class="btn-danger" href="https://github.com/user-attachments/files/25545210/MirageHelper2.1.zip">Download Helper</a>
@@ -129,6 +152,24 @@
         <img id="phoneFallback" class="hero-shot" src="images/hero-app.png" width="320" alt="Mirage Spoofer Android app">
         <canvas id="phone3d" aria-hidden="true"></canvas>
       </div>
+      <aside class="buy-card">
+        <span class="pill">INSTANT ACCESS</span>
+        <h2>License plans</h2>
+        <p class="muted">Pay via Telegram admin.</p>
+        <p class="hi">Payment Telegram admin ke through.</p>
+        <p class="buy-live" data-plan-live>₹1599 <small>/ 30 days</small></p>
+        <div class="plan-opts">
+          <button type="button" class="plan-opt" data-inr="1049" data-days="15">₹1049 <span>15 days</span></button>
+          <button type="button" class="plan-opt is-on" data-inr="1599" data-days="30">₹1599 <span>30 days</span></button>
+          <button type="button" class="plan-opt" data-inr="4599" data-usd="50" data-days="90">₹4599 / $50 <span>90 days</span></button>
+        </div>
+        <a class="btn-main" href="https://t.me/Miragespoofer">Buy via admin</a>
+        <ul class="buy-perks">
+          <li>Full app access for the selected days</li>
+          <li>Helper + APK install support</li>
+          <li>Telegram group + admin chat</li>
+        </ul>
+      </aside>
     </section>
 
     <section class="section alt">
@@ -154,17 +195,20 @@
           <p class="muted">Search <a href="search.html?q=root">root</a>, <a href="search.html?q=root%20module">root module</a>, <a href="search.html?q=spoofer">spoofer</a>, or <a href="search.html?q=rtc">RTC</a>.</p>
         </div>
         <div class="grid-3">
-          <article class="card">
+          <article class="card ico-card">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v4"/><rect x="5" y="7" width="14" height="14" rx="2"/></svg></span>
             <h3>Root + root module</h3>
             <p class="muted">Magisk or KernelSU, then the Helper zip. Full steps on the <a href="guide.html#root">guide</a>.</p>
             <p class="hi">Pehle root, phir Helper zip. Poora flow guide pe hai.</p>
           </article>
-          <article class="card">
+          <article class="card ico-card">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
             <h3>Spoofer profiles</h3>
             <p class="muted">Bulk unique IDs, widget switch, restore. See <a href="features.html">features</a>.</p>
             <p class="hi">Bulk IDs, widget switch, restore — Features page dekho.</p>
           </article>
-          <article class="card">
+          <article class="card ico-card">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
             <h3>RTC sync</h3>
             <p class="muted">Clock and timezone follow the profile location. Read <a href="guide.html#rtc">RTC</a>.</p>
             <p class="hi">Clock / timezone profile location ke saath sync.</p>

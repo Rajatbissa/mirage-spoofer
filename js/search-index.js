@@ -63,7 +63,7 @@ window.MIRAGE_SEARCH_INDEX = [
     title: "Pricing and license",
     url: "pricing.html",
     tags: ["pricing", "license", "recharge", "telegram"],
-    text: "Standard 15 days, Professional 30 days, Enterprise 90 days. Buy via Telegram admin."
+    text: "Standard 15 days ₹1049, Professional 30 days ₹1599, Enterprise 90 days ₹4599 or $50. Buy via Telegram admin."
   },
   {
     title: "Plan expired — Profile still opens",
