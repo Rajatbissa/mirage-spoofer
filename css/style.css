@@ -79,10 +79,27 @@ a { color: var(--primary-2); }
   padding: 10px 12px; border-radius: 10px; min-height: 44px; display: inline-flex; align-items: center; gap: 7px;
 }
 .nav-drawer a:hover, .nav-drawer a.is-active { color: #fff; background: rgba(124, 77, 255, 0.22); }
+.nav-drawer a.btn-solid,
+.nav-drawer a.btn-solid:hover,
+.nav-drawer a.btn-solid.is-active {
+  color: #120E1F;
+  background: #00E5FF;
+}
+.nav-drawer a.btn-ghost { color: #fff; }
 .nav-ico {
-  width: 16px; height: 16px; flex-shrink: 0;
-  display: block; fill: none; stroke: currentColor; stroke-width: 2;
-  stroke-linecap: round; stroke-linejoin: round;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: block;
+  overflow: visible;
+}
+.nav-ico,
+.nav-ico * {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .btn-ghost, .btn-solid, .btn-danger, .btn-main {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
@@ -285,8 +302,13 @@ h1 span {
 .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
 .ico svg {
   width: 20px; height: 20px; display: block;
-  fill: none; stroke: currentColor; stroke-width: 2;
-  stroke-linecap: round; stroke-linejoin: round;
+}
+.ico svg, .ico svg * {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .price-card .ico {
   width: 42px; height: 42px; display: grid; place-items: center;
