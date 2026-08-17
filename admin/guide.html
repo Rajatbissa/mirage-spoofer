@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide media admin | Mirage Spoofer</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="../logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="../index.html">MIRAGE<span>SPOOFER</span></a>
+      <a class="btn-ghost" href="../guide.html">View guide</a>
+    </div>
+  </header>
+  <main class="section">
+    <div class="wrap admin-box" style="max-width:560px">
+      <h1>Upload guide photos / videos</h1>
+      <p class="muted">Cloudinary unsigned preset <code>mirage_guide_unsigned</code>. API secret yahan nahi hai.</p>
+
+      <form data-admin-gate data-pin-form>
+        <label>Admin PIN</label>
+        <input name="pin" type="password" autocomplete="current-password">
+        <p data-pin-error class="warn"></p>
+        <button class="btn-main" type="submit">Unlock</button>
+      </form>
+
+      <div data-admin-panel hidden>
+        <label>Title</label>
+        <input name="mediaTitle" type="text" placeholder="Helper install">
+        <label>Caption</label>
+        <textarea name="mediaCaption" placeholder="Magisk me module enable..."></textarea>
+        <label>Tags (comma)</label>
+        <input name="mediaTags" type="text" placeholder="root, root module, spoofer, rtc">
+        <button class="btn-main" type="button" data-open-widget>Open Cloudinary upload</button>
+        <p data-upload-status class="muted"></p>
+        <p class="muted">Delete media Cloudinary Media Library se. Guide gallery ~1 minute me update ho sakti hai (resource list cache).</p>
+      </div>
+    </div>
+  </main>
+  <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+  <script src="../js/cloudinary-config.js"></script>
+  <script src="../js/cloudinary-admin.js"></script>
+</body>
+</html>
