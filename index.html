@@ -7,7 +7,7 @@
   <meta name="description" content="Download official Mirage Spoofer v21.36. Rooted Android identity engine with bulk profiles, floating widget, backup and restore. Magisk / KernelSU helper module required.">
   <meta name="keywords" content="Mirage Spoofer, root, root module, spoofer, RTC, Magisk, KernelSU, Android identity">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#07070c">
+  <meta name="theme-color" content="#120E1F">
   <link rel="canonical" href="https://www.miragespoof.in/">
   <link rel="icon" href="logo.png" type="image/png">
   <meta property="og:site_name" content="Mirage Spoofer">
@@ -45,6 +45,8 @@
   </script>
 </head>
 <body>
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+  <div class="cursor-glow" hidden></div>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-inner">
@@ -78,8 +80,17 @@
         </div>
         <p class="warn">Helper Magisk / KernelSU module pehle install karo, warna app crash ho sakti hai.</p>
       </div>
-      <img class="hero-shot" src="images/hero-app.png" width="320" alt="Mirage Spoofer Android app home screen">
+      <div class="hero-stage" data-tilt>
+        <img class="hero-shot" src="images/hero-app.png" width="320" alt="Mirage Spoofer Android app home screen">
+      </div>
     </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Root</span><span>Root module</span><span>Spoofer</span><span>RTC</span><span>IMEI</span><span>Android ID</span><span>Magisk</span><span>KernelSU</span>
+        <span>Root</span><span>Root module</span><span>Spoofer</span><span>RTC</span><span>IMEI</span><span>Android ID</span><span>Magisk</span><span>KernelSU</span>
+      </div>
+    </div>
 
     <section class="section alt">
       <div class="wrap">
@@ -127,5 +138,7 @@
     <p class="fine">FOR EDUCATIONAL AND LEARNING PURPOSES ONLY. COMPLY WITH ALL LOCAL LAWS AND USE RESPONSIBLY. USERS ASSUME ALL RISKS.</p>
   </footer>
   <script src="js/nav.js"></script>
+  <script src="js/motion.js"></script>
+  <script type="module" src="js/scene3d.js"></script>
 </body>
 </html>
