@@ -44,8 +44,13 @@ a { color: var(--primary-2); }
   min-height: 68px;
 }
 .logo {
+  display: inline-flex; align-items: center; gap: 10px;
   font-family: Outfit, sans-serif; font-weight: 900; letter-spacing: 0.02em;
   color: #fff; text-decoration: none; font-size: 1.15rem; margin-right: auto;
+}
+.logo img {
+  width: 36px; height: 36px; object-fit: contain; border-radius: 8px; flex-shrink: 0;
+  background: #1B1330;
 }
 .logo span { color: var(--primary-2); }
 .nav-toggle {
@@ -225,6 +230,7 @@ h1 span { color: var(--primary-2); }
   object-fit: cover;
   object-position: top;
 }
+.use-shots figure:only-child img { height: min(320px, 50vh); }
 .use-shots figcaption {
   padding: 6px 10px 10px;
   font-size: 0.75rem;
