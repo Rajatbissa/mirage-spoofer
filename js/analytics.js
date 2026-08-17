@@ -1,5 +1,5 @@
-/* Google Analytics 4 — website + later the Android app use the SAME G- ID. */
-window.MIRAGE_GA_ID = "G-4W2X9MNLFY";
+/* Google Analytics 4 — same Firebase property as the Android app (mirage-spoofer). */
+window.MIRAGE_GA_ID = "G-4S3HZTDL3K";
 
 (function () {
   var id = window.MIRAGE_GA_ID;
