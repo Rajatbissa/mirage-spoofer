@@ -179,13 +179,14 @@ h1 span { color: var(--primary-2); }
 .work-card { display: grid; grid-template-columns: 1.4fr 180px; gap: 24px; align-items: center; margin-bottom: 20px; }
 .work-card.reverse { direction: rtl; }
 .work-card.reverse > * { direction: ltr; }
-.ss { border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); max-height: 240px; width: auto; object-fit: cover; object-position: top; }
-.use-box { margin-top: 20px; }
+.ss { border-radius: 16px; box-shadow: 0 12px 28px rgba(0,0,0,0.35); max-height: 280px; width: auto; max-width: 100%; object-fit: contain; }
+.hi { display: block; margin-top: 6px; color: #9b92c9; font-size: 0.86em; font-weight: 600; }
+.use-box { margin-top: 20px; overflow: visible; }
 .use-layout {
   display: grid;
-  grid-template-columns: 1.35fr 220px;
-  gap: 20px;
-  align-items: stretch;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  gap: 24px;
+  align-items: start;
   margin-top: 18px;
 }
 .use-steps {
@@ -214,23 +215,30 @@ h1 span { color: var(--primary-2); }
 .use-shots {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 .use-shots figure {
   margin: 0;
   background: var(--bg-2);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  overflow: hidden;
-  flex: 1;
+  border-radius: 16px;
+  padding: 10px 10px 0;
+  overflow: visible;
+  text-align: center;
 }
 .use-shots img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  object-position: top;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
 }
-.use-shots figure:only-child img { height: min(320px, 50vh); }
+.use-shots figure:only-child img { max-height: 560px; }
+.use-shots figure:not(:only-child) img { max-height: 300px; }
 .use-shots figcaption {
   padding: 6px 10px 10px;
   font-size: 0.75rem;
@@ -298,9 +306,9 @@ h1 span { color: var(--primary-2); }
   .nav-drawer.is-open { display: flex; }
   .search-form input { width: 100%; }
   .hero, .work-card, .grid-2, .grid-3, .price-grid, .use-layout, .use-steps { grid-template-columns: 1fr; }
-  .use-shots { flex-direction: row; }
-  .use-shots figure { flex: 1; }
-  .use-shots img { height: 120px; }
+  .use-shots { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: flex-start; }
+  .use-shots figure { flex: 1 1 150px; max-width: 220px; }
+  .use-shots img { width: auto; max-width: 100%; height: auto; max-height: 340px; }
   .work-card.reverse { direction: ltr; }
   .price-card.pro { transform: none; }
   .hero { padding: 20px 0 8px; text-align: center; min-height: 0; }
