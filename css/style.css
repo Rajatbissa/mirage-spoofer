@@ -368,10 +368,11 @@ h1 span {
   animation: india-card-float 5s ease-in-out infinite;
 }
 .in-flag {
-  display: inline-flex; width: 22px; height: 15px; border-radius: 2px;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.18); overflow: hidden; flex-shrink: 0;
+  display: inline-flex; width: 32px; height: 21px; border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.2); overflow: hidden; flex-shrink: 0;
 }
-.in-flag svg { display: block; width: 22px; height: 15px; }
+.in-flag svg { display: block; width: 32px; height: 21px; }
+.in-flag svg * { fill: revert !important; stroke: revert !important; }
 @keyframes india-card-float {
   0%, 100% { transform: translate3d(0, 0, 0) rotateX(5deg) rotateY(-7deg); }
   50% { transform: translate3d(0, -10px, 16px) rotateX(7deg) rotateY(7deg); }

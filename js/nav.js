@@ -57,16 +57,26 @@
     footer.insertBefore(brand, footer.firstChild);
   }
   if (footer && !footer.querySelector(".made-in-india")) {
+    var spokes = "";
+    for (var s = 0; s < 24; s++) {
+      var a = (s * 15) * Math.PI / 180;
+      spokes += '<line x1="' + (45 + Math.sin(a) * 3.4).toFixed(2)
+        + '" y1="' + (30 - Math.cos(a) * 3.4).toFixed(2)
+        + '" x2="' + (45 + Math.sin(a) * 8.6).toFixed(2)
+        + '" y2="' + (30 - Math.cos(a) * 8.6).toFixed(2) + '"/>';
+    }
     var made = document.createElement("div");
     made.className = "made-in-india";
     made.setAttribute("aria-label", "Made in India");
     made.innerHTML = '<div class="india-float-card">'
-      + '<span class="in-flag" aria-hidden="true"><svg viewBox="0 0 9 6" width="22" height="15">'
-      + '<rect width="9" height="2" fill="#FF9933"/>'
-      + '<rect y="2" width="9" height="2" fill="#FFFFFF"/>'
-      + '<rect y="4" width="9" height="2" fill="#138808"/>'
-      + '<circle cx="4.5" cy="3" r="0.9" fill="none" stroke="#000080" stroke-width="0.18"/>'
-      + '</svg></span> Made in India'
+      + '<span class="in-flag" aria-hidden="true"><svg viewBox="0 0 90 60" width="32" height="21">'
+      + '<rect width="90" height="20" fill="#FF9933"/>'
+      + '<rect y="20" width="90" height="20" fill="#FFFFFF"/>'
+      + '<rect y="40" width="90" height="20" fill="#138808"/>'
+      + '<g fill="none" stroke="#000080" stroke-width="1.15" stroke-linecap="round">'
+      + '<circle cx="45" cy="30" r="9.2"/>'
+      + '<circle cx="45" cy="30" r="2.1" fill="#000080" stroke="none"/>'
+      + spokes + '</g></svg></span> Made in India'
       + '</div>';
     footer.appendChild(made);
   }
