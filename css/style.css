@@ -350,73 +350,75 @@ h1 span {
 .site-footer .fine { color: var(--danger); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.03em; }
 .made-in-india {
   display: flex; justify-content: center;
-  margin: 10px 0 -8px; padding-top: 22px; border-top: 1px solid var(--line);
-  perspective: 800px; min-height: 176px;
+  margin: 8px 0 0; padding-top: 20px; border-top: 1px solid var(--line);
+  perspective: 900px;
 }
-.india-balloon {
-  display: flex; flex-direction: column; align-items: center;
-  transform-style: preserve-3d;
-  animation: india-float 4.4s ease-in-out infinite;
-  filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.38));
-}
-.balloon-body {
-  position: relative;
-  width: 96px; height: 116px;
-  border-radius: 50% 50% 48% 48% / 40% 40% 60% 60%;
-  background:
-    radial-gradient(circle at 30% 24%, rgba(255,255,255,0.62), transparent 26%),
-    linear-gradient(180deg, #FF9933 0 33%, #FFFFFF 33% 67%, #138808 67% 100%);
+.india-float-card {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 18px 12px 14px;
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(56, 42, 88, 0.95), rgba(22, 16, 42, 0.96));
+  border: 1px solid rgba(255,255,255,0.12);
   box-shadow:
-    inset -16px -12px 24px rgba(0,0,0,0.28),
-    inset 12px 14px 20px rgba(255,255,255,0.3),
-    0 0 0 1px rgba(255,255,255,0.12);
-  display: grid; place-items: center;
-  transform: rotateX(8deg) rotateY(-12deg);
+    0 18px 36px rgba(0,0,0,0.32),
+    inset 0 1px 0 rgba(255,255,255,0.12);
+  transform-style: preserve-3d;
+  animation: india-card-float 5s ease-in-out infinite;
 }
-.balloon-shine {
-  position: absolute; left: 18%; top: 14%;
-  width: 22px; height: 16px; border-radius: 50%;
-  background: rgba(255,255,255,0.55); filter: blur(1px);
-  pointer-events: none;
+.india-flag {
+  display: flex; align-items: stretch; height: 36px;
+  transform-style: preserve-3d;
 }
-.balloon-chakra {
-  position: absolute; width: 18px; height: 18px; border-radius: 50%;
-  border: 2px solid #000080; opacity: 0.9;
-  box-shadow: 0 0 0 3px rgba(0,0,128,0.08);
+.flag-pole {
+  width: 3px; border-radius: 2px;
+  background: linear-gradient(180deg, #e8e4f5, #8b83a8);
+  box-shadow: 1px 0 2px rgba(0,0,0,0.35);
+  z-index: 2;
 }
-.balloon-chakra:before {
-  content: ""; position: absolute; inset: 5px; border-radius: 50%; background: #000080;
+.flag-cloth {
+  position: relative;
+  display: flex; width: 54px; height: 36px;
+  transform-origin: left center;
+  filter: drop-shadow(2px 3px 4px rgba(0,0,0,0.35));
 }
-.balloon-text {
-  position: relative; z-index: 1;
-  font-family: Outfit, sans-serif; font-weight: 900;
-  font-size: 0.58rem; letter-spacing: 0.06em; line-height: 1.15;
-  text-align: center; text-transform: uppercase; color: #000080;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.7);
-  margin-top: 22px;
+.flag-cloth i {
+  display: block; flex: 1 1 auto; font-style: normal;
+  background: linear-gradient(180deg, #FF9933 0 33.34%, #FFFFFF 33.34% 66.66%, #138808 66.66%);
+  transform-origin: left center;
+  animation: india-flag-wave 1.05s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.07s);
 }
-.balloon-knot {
-  width: 12px; height: 10px; margin-top: -3px;
-  background: linear-gradient(180deg, #e8892a, #c45f10);
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+.flag-cloth i:nth-child(odd) { filter: brightness(0.92); }
+.flag-chakra {
+  position: absolute; left: 50%; top: 50%;
+  width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px;
+  border: 1.5px solid #000080; border-radius: 50%;
+  pointer-events: none; z-index: 1;
+  box-shadow: inset 0 0 0 3.5px #fff, 0 0 0 1px rgba(0,0,128,0.15);
 }
-.balloon-string {
-  width: 2px; height: 38px;
-  background: linear-gradient(180deg, #d4c6ff, #7C4DFF 70%, transparent);
-  border-radius: 2px;
-  transform-origin: top center;
-  animation: india-string 4.4s ease-in-out infinite;
+.flag-chakra:after {
+  content: ""; position: absolute; inset: 3px; border-radius: 50%; background: #000080;
 }
-@keyframes india-float {
-  0%, 100% { transform: translate3d(0, 0, 0) rotateZ(-6deg) rotateY(-10deg); }
-  50% { transform: translate3d(8px, -18px, 24px) rotateZ(6deg) rotateY(10deg); }
+.india-copy { text-align: left; line-height: 1.15; }
+.india-copy span {
+  display: block; font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: #b7aee0;
 }
-@keyframes india-string {
-  0%, 100% { transform: rotate(-8deg); }
-  50% { transform: rotate(8deg); }
+.india-copy strong {
+  display: block; font-family: Outfit, sans-serif; font-weight: 900;
+  font-size: 1.15rem; letter-spacing: 0.04em; color: #fff;
+}
+@keyframes india-card-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotateX(5deg) rotateY(-7deg); }
+  50% { transform: translate3d(0, -10px, 16px) rotateX(7deg) rotateY(7deg); }
+}
+@keyframes india-flag-wave {
+  0%, 100% { transform: translateY(0) skewY(0deg) scaleY(1); }
+  25% { transform: translateY(-3px) skewY(7deg) scaleY(1.04); }
+  75% { transform: translateY(3px) skewY(-7deg) scaleY(0.97); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .india-balloon, .balloon-string { animation: none; }
+  .india-float-card, .flag-cloth i { animation: none; }
 }
 .admin-box input, .admin-box textarea {
   width: 100%; min-height: 44px; margin: 8px 0 14px; border-radius: 12px; border: 1px solid var(--line);
