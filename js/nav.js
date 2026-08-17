@@ -45,11 +45,22 @@
     img.style.objectFit = "contain";
   });
   var footer = document.querySelector(".site-footer");
+  if (!footer) {
+    footer = document.createElement("footer");
+    footer.className = "site-footer";
+    document.body.appendChild(footer);
+  }
   if (footer && !footer.querySelector(".footer-brand")) {
     var brand = document.createElement("p");
     brand.className = "footer-brand";
     brand.innerHTML = '<img src="' + asset("logo-mark.png") + '" width="28" height="28" alt=""> <strong>Mirage Spoofer</strong>';
     footer.insertBefore(brand, footer.firstChild);
+  }
+  if (footer && !footer.querySelector(".made-in-india")) {
+    var made = document.createElement("p");
+    made.className = "made-in-india";
+    made.innerHTML = '<span class="in-flag" aria-hidden="true"><svg viewBox="0 0 9 6" width="22" height="15"><rect width="9" height="2" fill="#FF9933"/><rect y="2" width="9" height="2" fill="#FFFFFF"/><rect y="4" width="9" height="2" fill="#138808"/><circle cx="4.5" cy="3" r="0.9" fill="none" stroke="#000080" stroke-width="0.18"/></svg></span> Made in India';
+    footer.appendChild(made);
   }
 
   if (!document.querySelector(".fx-orbs")) {
