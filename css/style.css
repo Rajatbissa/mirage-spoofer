@@ -276,6 +276,11 @@ h1 span { color: var(--primary-2); }
   margin: 24px auto 40px; width: min(var(--max), calc(100% - 32px));
   background: var(--bg-2); border: 1px solid var(--line); border-radius: 16px; padding: 28px; text-align: center;
 }
+.footer-brand {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: Outfit, sans-serif; font-weight: 900; margin: 0 0 12px;
+}
+.footer-brand img { width: 28px; height: 28px; object-fit: contain; border-radius: 6px; }
 .site-footer .fine { color: var(--danger); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.03em; }
 .admin-box input, .admin-box textarea {
   width: 100%; min-height: 44px; margin: 8px 0 14px; border-radius: 12px; border: 1px solid var(--line);

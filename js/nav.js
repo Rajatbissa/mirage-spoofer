@@ -25,4 +25,30 @@
       window.location.href = searchPage + (q ? "?q=" + encodeURIComponent(q) : "");
     });
   });
+
+  function asset(name) {
+    var path = (location.pathname || "").replace(/\\/g, "/");
+    return /\/(legal|admin)(\/|$)/.test(path) ? "../" + name : name;
+  }
+  document.querySelectorAll("a.logo").forEach(function (el) {
+    var img = el.querySelector("img");
+    if (!img) {
+      img = document.createElement("img");
+      el.insertBefore(img, el.firstChild);
+    }
+    img.src = asset("logo-mark.png");
+    img.alt = "Mirage Spoofer";
+    img.width = 36;
+    img.height = 36;
+    img.style.width = "36px";
+    img.style.height = "36px";
+    img.style.objectFit = "contain";
+  });
+  var footer = document.querySelector(".site-footer");
+  if (footer && !footer.querySelector(".footer-brand")) {
+    var brand = document.createElement("p");
+    brand.className = "footer-brand";
+    brand.innerHTML = '<img src="' + asset("logo-mark.png") + '" width="28" height="28" alt=""> <strong>Mirage Spoofer</strong>';
+    footer.insertBefore(brand, footer.firstChild);
+  }
 })();
