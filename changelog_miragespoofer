@@ -1,10 +1,14 @@
-Mirage Spoofer v21.36 | Official
+Mirage Spoofer v21.37
 
-What's new:
-- Login and register are more reliable. Your account profile now saves correctly after signup.
-- If your plan has ended, you can still open the app and check Profile — email, status, and expiry.
-- Home and Group stay available to browse. After you recharge, full access unlocks again.
-- Recharge from the lock screen or Profile when you are ready to continue.
+Mirage Spoofer v21.37
 
-Download: https://www.miragespoof.in/
-Release: https://github.com/Rajatbissa/mirage-spoofer/releases/tag/v21.36
+versionCode: 93
+
+## What's new for you
+
+- Google Analytics on every app screen (same property as the website).
+- LSPosed Manager update check now follows GitHub Releases automatically.
+
+## Install
+
+Download `Mirage_Spoofer_v21.37.apk` below and install over your current official app.
