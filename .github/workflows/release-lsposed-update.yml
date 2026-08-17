@@ -1,0 +1,106 @@
+# LSPosed Manager reads xposedupdate → app_update.json on this repo.
+# Publish a GitHub Release (tag v21.37, APK asset Mirage_Spoofer_v21.37.apk)
+# and this job rewrites app_update.json + changelog_miragespoofer automatically.
+#
+# Put this line in the release body so versionCode stays in sync with Gradle:
+#   versionCode: 93
+
+name: LSPosed update JSON
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Rewrite app_update.json from release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          if [ "${{ github.event_name }}" = "release" ]; then
+            TAG="${GITHUB_REF_NAME}"
+          else
+            TAG="$(gh release view --json tagName -q .tagName)"
+          fi
+
+          VER="${TAG#v}"
+          VER="${VER#V}"
+          APK="Mirage_Spoofer_v${VER}.apk"
+
+          ASSET="$(gh release view "$TAG" --json assets -q '.assets[].name' | grep -E '^Mirage_Spoofer_v.*\.apk$' | head -n1 || true)"
+          if [ -n "$ASSET" ]; then
+            APK="$ASSET"
+          fi
+
+          ZIP_URL="https://github.com/${REPO}/releases/download/${TAG}/${APK}"
+          NAME="$(gh release view "$TAG" --json name -q .name)"
+          BODY="$(gh release view "$TAG" --json body -q .body)"
+          if [ -z "$NAME" ] || [ "$NAME" = "null" ]; then
+            NAME="Mirage Spoofer v${VER} | Official"
+          fi
+          if [ "$BODY" = "null" ]; then
+            BODY=""
+          fi
+
+          OLD_CODE=0
+          if [ -f app_update.json ]; then
+            OLD_CODE="$(python3 -c "import json; print(int(json.load(open('app_update.json')).get('versionCode') or 0))")"
+          fi
+
+          CODE="$(printf '%s\n' "$BODY" | sed -n 's/.*[Vv]ersion[Cc]ode[[:space:]]*[:=][[:space:]]*\([0-9][0-9]*\).*/\1/p' | head -n1 || true)"
+          if [ -z "$CODE" ]; then
+            CODE=$((OLD_CODE + 1))
+          fi
+
+          export REL_NAME="$NAME"
+          export REL_CODE="$CODE"
+          export ZIP_URL
+          export CHANGELOG_URL="https://raw.githubusercontent.com/${REPO}/refs/heads/main/changelog_miragespoofer"
+
+          python3 <<'PY'
+          import json, os
+          from pathlib import Path
+          data = {
+              "version": os.environ["REL_NAME"],
+              "versionCode": int(os.environ["REL_CODE"]),
+              "zipUrl": os.environ["ZIP_URL"],
+              "changelog": os.environ["CHANGELOG_URL"],
+          }
+          text = json.dumps(data, indent=2) + "\n"
+          for path in (Path("app_update.json"), Path("website/app_update.json")):
+              if path.parent == Path(".") or path.parent.exists() or path.exists():
+                  path.write_text(text, encoding="utf-8")
+          print("Wrote", data)
+          PY
+
+          {
+            printf '%s\n\n' "$NAME"
+            printf '%s\n' "$BODY"
+          } > changelog_miragespoofer
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app_update.json changelog_miragespoofer
+          if [ -f website/app_update.json ]; then
+            git add website/app_update.json
+          fi
+          if git diff --cached --quiet; then
+            echo "No LSPosed JSON changes"
+            exit 0
+          fi
+          git commit -m "chore: LSPosed updateJson for ${TAG}"
+          git push
