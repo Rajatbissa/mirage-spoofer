@@ -63,4 +63,5 @@ Keep the public group/about text pointing at **https://www.miragespoof.in/**.
 - [Proxy connect](https://www.miragespoof.in/proxy.html)
 - [VPN](https://www.miragespoof.in/vpn.html)
 - [Spoof IP](https://www.miragespoof.in/spoof-ip.html)
+- [Blog](https://www.miragespoof.in/blog/)
 - [Setup](https://www.miragespoof.in/docs/setup.html)

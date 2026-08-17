@@ -138,6 +138,36 @@ window.MIRAGE_SEARCH_INDEX = [
     text: "Spoof IP through proxy connect so apps see the proxy exit, not your real IP."
   },
   {
+    title: "Blog",
+    url: "blog/",
+    tags: ["blog", "posts", "guide"],
+    text: "Official Mirage Spoofer blog: install, location, proxy, LSPosed."
+  },
+  {
+    title: "Blog: How to install Mirage Spoofer",
+    url: "blog/install-mirage-spoofer.html",
+    tags: ["blog", "install", "v21.38", "helper"],
+    text: "Install Helper Magisk KernelSU then APK v21.38 then LSPosed."
+  },
+  {
+    title: "Blog: Spoof location with timezone",
+    url: "blog/spoof-location-with-timezone.html",
+    tags: ["blog", "spoof location with timezone", "rtc"],
+    text: "GPS and RTC clock in the same region."
+  },
+  {
+    title: "Blog: Proxy connect and spoof IP",
+    url: "blog/proxy-connect-spoof-ip.html",
+    tags: ["blog", "proxy connect", "vpn", "spoof ip"],
+    text: "Proxy connect, hidden VPN tunnel, spoof IP."
+  },
+  {
+    title: "Blog: Enable LSPosed module",
+    url: "blog/enable-lsposed-module.html",
+    tags: ["blog", "lsposed", "scope"],
+    text: "Enable Mirage Spoofer in LSPosed and pick target apps."
+  },
+  {
     title: "Pricing and license",
     url: "pricing.html",
     tags: ["pricing", "license", "recharge", "telegram"],
