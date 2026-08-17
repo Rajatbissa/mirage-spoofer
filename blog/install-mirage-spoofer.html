@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Install Mirage Spoofer v21.38 | Official Blog</title>
-  <meta name="description" content="Install Mirage Spoofer v21.38 on rooted Android: flash the Magisk or KernelSU Helper module, install the APK, enable LSPosed, allow root. Official steps.">
+  <meta name="description" content="Install Mirage Spoofer v21.38 on rooted Android: flash Helper zip in Magisk or KernelSU, reboot, install the APK, enable LSPosed, allow root. Official files only.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.miragespoof.in/blog/install-mirage-spoofer.html">
   <link rel="icon" href="../logo-mark.png" type="image/png">
   <meta property="og:title" content="How to Install Mirage Spoofer v21.38">
+  <meta property="og:description" content="Helper module first, then APK, then LSPosed. Magisk or KernelSU. Official how-to.">
   <meta property="og:url" content="https://www.miragespoof.in/blog/install-mirage-spoofer.html">
   <meta property="og:type" content="article">
-  <link rel="stylesheet" href="../css/style.css?v=27">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=29">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Install Mirage Spoofer v21.38","datePublished":"2026-08-17","dateModified":"2026-08-17","author":{"@type":"Organization","name":"Mirage Spoofer"},"publisher":{"@type":"Organization","name":"Mirage Spoofer","url":"https://www.miragespoof.in/"},"mainEntityOfPage":"https://www.miragespoof.in/blog/install-mirage-spoofer.html"}
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Install Mirage Spoofer v21.38","description":"Official install order: Helper zip, reboot, APK, LSPosed scope, root permission.","datePublished":"2026-08-17","author":{"@type":"Organization","name":"Mirage Spoofer"},"mainEntityOfPage":"https://www.miragespoof.in/blog/install-mirage-spoofer.html"}
   </script>
   <script src="../js/analytics.js?v=30"></script>
 </head>
@@ -27,40 +29,73 @@
         <a href="../guide.html">Guide</a>
         <a class="is-active" href="index.html">Blog</a>
         <a href="../download.html">Download</a>
+        <a href="../pricing.html">Pricing</a>
         <a href="../faq.html">FAQ</a>
         <form class="search-form" data-search-form data-search-action="../search.html">
           <input name="q" type="search" placeholder="install, helper..." aria-label="Search site">
         </form>
+        <a class="btn-ghost" href="https://t.me/miragespoofer_root">Join Group</a>
+        <a class="btn-solid" href="https://t.me/Miragespoofer">Admin</a>
       </nav>
     </div>
   </header>
   <main class="section">
     <div class="wrap">
       <nav class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Blog</a> / <span>Install</span></nav>
-      <article class="card">
-        <p class="muted">17 Aug 2026 · Official blog</p>
-        <h1>How to install Mirage Spoofer v21.38</h1>
-        <p class="muted">Mirage Spoofer is a rooted Android identity engine. The APK is only the UI. The <a href="../root-module.html">Helper root module</a> must be installed first on Magisk or KernelSU. Skip the zip and the app can crash.</p>
-        <p class="hi">Pehle Helper zip, phir APK. Module ke bina crash ho sakti hai.</p>
+      <article class="card post-article">
+        <div class="post-hero ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></span>
+          <div>
+            <p class="blog-meta">17 Aug 2026 · 6 min read · Install</p>
+            <h1>How to install Mirage Spoofer v21.38</h1>
+            <p class="muted">Official order on rooted Android: Helper root module, reboot, APK, LSPosed scope, then allow root. The APK is the UI. The zip does the system work — restore, proxy, and background jobs.</p>
+          </div>
+        </div>
+        <div class="post-body">
+        <p class="hi">Pehle Helper zip flash karo, reboot, phir v21.38 APK. LSPosed me module on. Root allow. Module skip kiya to crash ho sakti hai.</p>
+        <div class="post-callout"><strong>One rule:</strong> install the Helper zip before the APK. Mixing random mirrors or skipping the module is the usual reason the app dies on launch.</div>
         <h2>What you need</h2>
-        <ul class="muted">
-          <li>Android 9 or newer, already rooted (Magisk or KernelSU).</li>
-          <li>LSPosed working on that root.</li>
-          <li>Official files only from <a href="https://www.miragespoof.in/">miragespoof.in</a> or GitHub.</li>
+        <ul>
+          <li>Android 9 or newer.</li>
+          <li>Working Magisk or KernelSU root (not a “root cloaker” APK from a random site).</li>
+          <li>LSPosed already installed on that root.</li>
+          <li>Files only from <a href="https://www.miragespoof.in/">miragespoof.in</a> or the GitHub v21.38 release — not Telegram forwards of unknown zips.</li>
         </ul>
-        <h2>Steps</h2>
-        <ol class="muted">
-          <li>Download the Helper zip from the <a href="../download.html">download page</a> and flash it as a Magisk / KernelSU module. Reboot.</li>
-          <li>Install <a href="../apk.html">Mirage Spoofer APK v21.38</a> over the official app.</li>
-          <li>Open LSPosed, enable Mirage Spoofer, select target apps. See the <a href="enable-lsposed-module.html">LSPosed blog post</a>.</li>
-          <li>Open Mirage Spoofer and allow root when asked. Login or register.</li>
-        </ol>
-        <p class="muted">Full screenshots live on the <a href="../guide.html">guide</a>. FOR EDUCATIONAL AND LEARNING PURPOSES ONLY.</p>
-        <p><a class="btn-main" href="../apk.html">Get the APK</a> <a class="btn-ghost" href="index.html">All posts</a></p>
+        <h2>Why Helper comes first</h2>
+        <p>Mirage Spoofer is two pieces. The APK lets you log in, edit profiles, and switch from Home or the floating widget. The Helper is the <a href="../root-module.html">root module</a>: it runs the Magisk / KernelSU side so restore, proxy connect, and ADB-style jobs can actually execute. If you only install the APK, you still have a UI — you do not have the engine.</p>
+        <h2>Step 1 — Flash the Helper zip</h2>
+        <p>Open Magisk or KernelSU. Install the official Helper zip from the <a href="../download.html">download page</a>. Reboot when the manager asks. After reboot, confirm the module is still enabled in the modules list. Magisk and KernelSU both work; pick the one your phone already uses. Do not flash an old Helper over a new APK or the other way around if the site lists a matching pair.</p>
+        <h2>Step 2 — Install APK v21.38</h2>
+        <p>Install <a href="../apk.html">Mirage_Spoofer_v21.38.apk</a> over the current official app. Allow unknown sources if Android asks. Uninstall piracy or cracked APKs first — mixed signatures and leftover data cause login and crash loops. Package name is <code>com.mirage.spoofer</code>.</p>
+        <h2>Step 3 — Enable in LSPosed</h2>
+        <p>Open LSPosed Manager → Modules → Mirage Spoofer → on. Tick every target app in scope (select-all is often blocked). Reboot again if LSPosed asks. Full walkthrough: <a href="enable-lsposed-module.html">enable Mirage Spoofer in LSPosed</a>.</p>
+        <h2>Step 4 — First launch</h2>
+        <p>Open Mirage Spoofer. Allow root when Magisk / KernelSU prompts. Login or register. Email, plan, and expiry sit on Profile. Create a profile or pick one, then switch from Home or the floating widget. Screenshots and widget notes: <a href="../guide.html">full guide</a>.</p>
+        <h2>If the app crashes or “does nothing”</h2>
+        <ul class="check-list">
+          <li>Helper module enabled after reboot.</li>
+          <li>LSPosed shows Mirage on, and the target app is in scope.</li>
+          <li>You allowed root — not “deny” once and forgot.</li>
+          <li>Only the official APK, not a renamed clone.</li>
+        </ul>
+        <p>Plan expiry is not a crash: Profile still opens so you can recharge. See the <a href="../faq.html">FAQ</a>.</p>
+        <div class="post-warn">FOR EDUCATIONAL AND LEARNING PURPOSES ONLY. Comply with local laws. Do not use this to commit fraud or evade lawful checks.</div>
+        <h2>Related posts</h2>
+        <div class="related-posts">
+          <a href="enable-lsposed-module.html"><strong>Enable in LSPosed</strong><span>Module on, tick each target app, reboot.</span></a>
+          <a href="spoof-location-with-timezone.html"><strong>Location + timezone</strong><span>GPS pin and RTC clock in one region.</span></a>
+          <a href="proxy-connect-spoof-ip.html"><strong>Proxy + spoof IP</strong><span>Host, port, tunnel. GPS does not change IP.</span></a>
+        </div>
+        <p class="post-actions">
+          <a class="btn-main" href="../apk.html">Download APK</a>
+          <a class="btn-danger" href="https://github.com/user-attachments/files/25545210/MirageHelper2.1.zip">Helper zip</a>
+          <a class="btn-ghost" href="index.html">All posts</a>
+        </p>
+        </div>
       </article>
     </div>
   </main>
   <footer class="site-footer"><p class="fine">Official site: miragespoof.in</p></footer>
-  <script src="../js/nav.js?v=32"></script>
+  <script src="../js/nav.js?v=33"></script>
 </body>
 </html>

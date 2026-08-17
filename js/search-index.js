@@ -141,31 +141,31 @@ window.MIRAGE_SEARCH_INDEX = [
     title: "Blog",
     url: "blog/",
     tags: ["blog", "posts", "guide"],
-    text: "Official Mirage Spoofer blog: install, location, proxy, LSPosed."
+    text: "Official Mirage Spoofer blog: how to install Helper and APK v21.38, spoof location with timezone, proxy connect, spoof IP, enable LSPosed."
   },
   {
     title: "Blog: How to install Mirage Spoofer",
     url: "blog/install-mirage-spoofer.html",
     tags: ["blog", "install", "v21.38", "helper"],
-    text: "Install Helper Magisk KernelSU then APK v21.38 then LSPosed."
+    text: "Install Helper Magisk or KernelSU zip first, reboot, then APK v21.38, then LSPosed scope and allow root."
   },
   {
     title: "Blog: Spoof location with timezone",
     url: "blog/spoof-location-with-timezone.html",
     tags: ["blog", "spoof location with timezone", "rtc"],
-    text: "GPS and RTC clock in the same region."
+    text: "Set the map pin and keep RTC on so GPS and clock stay in one region. GPS does not change IP."
   },
   {
     title: "Blog: Proxy connect and spoof IP",
     url: "blog/proxy-connect-spoof-ip.html",
     tags: ["blog", "proxy connect", "vpn", "spoof ip"],
-    text: "Proxy connect, hidden VPN tunnel, spoof IP."
+    text: "Per-profile proxy host and port, hidden VPN tunnel, spoof IP. GPS does not change public IP."
   },
   {
     title: "Blog: Enable LSPosed module",
     url: "blog/enable-lsposed-module.html",
     tags: ["blog", "lsposed", "scope"],
-    text: "Enable Mirage Spoofer in LSPosed and pick target apps."
+    text: "Turn Mirage Spoofer on in LSPosed, tick each target app in scope, reboot. Hooks only inside scope."
   },
   {
     title: "Pricing and license",

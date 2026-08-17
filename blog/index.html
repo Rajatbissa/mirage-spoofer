@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mirage Spoofer Blog | Install, Location, Proxy, LSPosed</title>
-  <meta name="description" content="Official Mirage Spoofer blog: how to install on Magisk/KernelSU, spoof location with timezone, proxy connect, spoof IP, and LSPosed scope. Rooted Android.">
-  <meta name="keywords" content="Mirage Spoofer blog, Mirage Spoofer guide, spoof location, proxy connect, LSPosed, rooted Android">
+  <title>Mirage Spoofer Blog | Official How-to for Rooted Android</title>
+  <meta name="description" content="Official Mirage Spoofer blog: install v21.38 with Magisk Helper, spoof location with timezone, proxy connect, spoof IP, and enable LSPosed. Short how-tos for rooted Android.">
+  <meta name="keywords" content="Mirage Spoofer blog, how to install Mirage Spoofer, spoof location with timezone, proxy connect, spoof IP, LSPosed, Magisk Helper">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.miragespoof.in/blog/">
   <link rel="icon" href="../logo-mark.png" type="image/png">
   <meta property="og:site_name" content="Mirage Spoofer">
-  <meta property="og:title" content="Mirage Spoofer Blog">
+  <meta property="og:title" content="Mirage Spoofer Blog | Official How-to">
+  <meta property="og:description" content="Install, spoof location with timezone, proxy connect, spoof IP, LSPosed — official posts for rooted Android.">
   <meta property="og:url" content="https://www.miragespoof.in/blog/">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="../css/style.css?v=27">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=29">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Blog","name":"Mirage Spoofer Blog","url":"https://www.miragespoof.in/blog/","publisher":{"@type":"Organization","name":"Mirage Spoofer","url":"https://www.miragespoof.in/"}}
+  {"@context":"https://schema.org","@type":"Blog","name":"Mirage Spoofer Blog","description":"Official how-to posts for the rooted Android identity engine: install, location + timezone, proxy, LSPosed.","url":"https://www.miragespoof.in/blog/","publisher":{"@type":"Organization","name":"Mirage Spoofer","url":"https://www.miragespoof.in/"}}
   </script>
   <script src="../js/analytics.js?v=30"></script>
 </head>
@@ -32,7 +34,7 @@
         <a href="../pricing.html">Pricing</a>
         <a href="../faq.html">FAQ</a>
         <form class="search-form" data-search-form data-search-action="../search.html">
-          <input name="q" type="search" placeholder="blog, location, proxy..." aria-label="Search site">
+          <input name="q" type="search" placeholder="install, location, proxy..." aria-label="Search site">
         </form>
         <a class="btn-ghost" href="https://t.me/miragespoofer_root">Join Group</a>
         <a class="btn-solid" href="https://t.me/Miragespoofer">Admin</a>
@@ -42,39 +44,60 @@
   <main class="section">
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <span>Blog</span></nav>
-      <div class="section-head">
+      <div class="blog-intro">
+        <p class="blog-kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h6M7 16h8"/></svg> Official how-to</p>
         <h1>Mirage Spoofer blog</h1>
-        <p class="muted">Short official posts Google can index. Same product as the <a href="../guide.html">install guide</a>. Educational use only.</p>
-        <p class="hi">Official posts. Guide jaisa content, alag URLs.</p>
+        <p class="lead">Practical posts for rooted Android — not a dump of the full guide. Each article is one job: install the Helper + APK, spoof location with timezone, connect a proxy to spoof IP, or enable the module in LSPosed.</p>
+        <p class="muted">Written for Magisk / KernelSU phones on v21.38. Same product as the <a href="../guide.html">full guide</a> and <a href="../docs/">docs</a>, split so you can open one page and follow it. Educational use only.</p>
+        <p class="hi">Rooted phone ke liye short how-to. Helper pehle, APK baad me, LSPosed scope last. Location + timezone ek post. Proxy / IP alag post.</p>
+        <div class="blog-pills">
+          <span>v21.38 APK</span>
+          <span>Helper zip</span>
+          <span>LSPosed scope</span>
+          <span>GPS + RTC</span>
+          <span>Proxy / spoof IP</span>
+        </div>
       </div>
       <div class="grid-2">
-        <article class="card">
-          <p class="muted">17 Aug 2026</p>
+        <article class="card ico-card blog-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></span>
+          <p class="blog-meta">17 Aug 2026 · 6 min · Install</p>
           <h2><a href="install-mirage-spoofer.html">How to install Mirage Spoofer v21.38</a></h2>
-          <p class="muted">Helper root module first, then the APK, then LSPosed. Magisk or KernelSU.</p>
+          <p class="muted">The APK is only the UI. Flash the official Helper zip on Magisk or KernelSU, reboot, then install the APK, then turn the module on in LSPosed and allow root. Skip the zip and restore, proxy, and background jobs can fail — the app can crash.</p>
+          <p class="hi">Helper zip pehle. Reboot. Phir v21.38 APK. Module skip = crash risk.</p>
+          <a class="btn-ghost" href="install-mirage-spoofer.html">Read install steps</a>
         </article>
-        <article class="card">
-          <p class="muted">17 Aug 2026</p>
-          <h2><a href="spoof-location-with-timezone.html">Spoof location with timezone (RTC)</a></h2>
-          <p class="muted">GPS pin and clock must stay in the same region.</p>
+        <article class="card ico-card blog-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <p class="blog-meta">17 Aug 2026 · 6 min · GPS + RTC</p>
+          <h2><a href="spoof-location-with-timezone.html">Spoof location with timezone</a></h2>
+          <p class="muted">Drop the map pin, keep RTC on, so clock and GPS stay in one region. New York GPS with an India clock looks inconsistent to apps. This post covers the map picker, widget switch, and what location spoof does not change (your public IP).</p>
+          <p class="hi">Location ke saath timezone. GPS aur clock ek hi region.</p>
+          <a class="btn-ghost" href="spoof-location-with-timezone.html">Read location + RTC</a>
         </article>
-        <article class="card">
-          <p class="muted">17 Aug 2026</p>
+        <article class="card ico-card blog-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <p class="blog-meta">17 Aug 2026 · 7 min · Network</p>
           <h2><a href="proxy-connect-spoof-ip.html">Proxy connect, VPN tunnel, spoof IP</a></h2>
-          <p class="muted">IP changes through your proxy, not through GPS alone.</p>
+          <p class="muted">You bring the proxy (host, port, HTTP or SOCKS). Helper turns it on per profile so scoped apps can spoof IP. GPS never changes public IP. The tunnel can hide consumer-VPN flags — it is still your proxy, not a sold VPN plan.</p>
+          <p class="hi">IP proxy se. GPS se nahi. Profile switch pe on/off.</p>
+          <a class="btn-ghost" href="proxy-connect-spoof-ip.html">Read proxy + IP</a>
         </article>
-        <article class="card">
-          <p class="muted">17 Aug 2026</p>
+        <article class="card ico-card blog-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>
+          <p class="blog-meta">17 Aug 2026 · 5 min · LSPosed</p>
           <h2><a href="enable-lsposed-module.html">Enable Mirage Spoofer in LSPosed</a></h2>
-          <p class="muted">Turn the module on and pick target apps in scope.</p>
+          <p class="muted">Hooks run only inside apps you tick in scope. Module off, or the app missing from the list, means real IDs and GPS stay. Select-all is unreliable — tick each target, reboot, then switch the profile from Home or the widget.</p>
+          <p class="hi">Module on + har target app tick. Scope ke bahar hook nahi.</p>
+          <a class="btn-ghost" href="enable-lsposed-module.html">Read LSPosed steps</a>
         </article>
       </div>
     </div>
   </main>
   <footer class="site-footer">
-    <p><a href="../guide.html">Guide</a> · <a href="../download.html">Download</a> · <a href="../legal/terms.html">Terms</a></p>
+    <p><a href="../guide.html">Guide</a> · <a href="../download.html">Download</a> · <a href="../apk.html">APK</a> · <a href="../legal/terms.html">Terms</a></p>
     <p class="fine">FOR EDUCATIONAL AND LEARNING PURPOSES ONLY. Official site: miragespoof.in</p>
   </footer>
-  <script src="../js/nav.js?v=32"></script>
+  <script src="../js/nav.js?v=33"></script>
 </body>
 </html>

@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proxy Connect, VPN Tunnel, Spoof IP | Mirage Spoofer Blog</title>
-  <meta name="description" content="Mirage Spoofer proxy connect routes app traffic through your proxy so you can spoof IP. Hidden VPN tunnel. GPS does not change public IP.">
+  <meta name="description" content="How Mirage Spoofer proxy connect works: per-profile host and port, hidden VPN tunnel, spoof IP. GPS does not change your public address. Rooted Android how-to.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.miragespoof.in/blog/proxy-connect-spoof-ip.html">
   <link rel="icon" href="../logo-mark.png" type="image/png">
   <meta property="og:title" content="Proxy Connect, VPN Tunnel, Spoof IP">
+  <meta property="og:description" content="Bring your proxy. Helper routes the target app. Not a consumer VPN plan. Official how-to.">
   <meta property="og:url" content="https://www.miragespoof.in/blog/proxy-connect-spoof-ip.html">
   <meta property="og:type" content="article">
-  <link rel="stylesheet" href="../css/style.css?v=27">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=29">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Proxy Connect, VPN Tunnel, Spoof IP","datePublished":"2026-08-17","author":{"@type":"Organization","name":"Mirage Spoofer"},"mainEntityOfPage":"https://www.miragespoof.in/blog/proxy-connect-spoof-ip.html"}
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Proxy Connect, VPN Tunnel, Spoof IP","description":"Per-profile proxy, hidden tunnel, spoof IP. GPS does not change public IP.","datePublished":"2026-08-17","author":{"@type":"Organization","name":"Mirage Spoofer"},"mainEntityOfPage":"https://www.miragespoof.in/blog/proxy-connect-spoof-ip.html"}
   </script>
   <script src="../js/analytics.js?v=30"></script>
 </head>
@@ -23,36 +25,70 @@
       <a class="logo" href="../index.html"><img src="../logo-mark.png" width="36" height="36" alt="Mirage Spoofer">MIRAGE<span>SPOOFER</span></a>
       <button class="nav-toggle" data-nav-toggle type="button" aria-expanded="false" aria-label="Open menu"><span></span></button>
       <nav class="nav-drawer" data-nav-drawer>
+        <a href="../features.html">Features</a>
         <a href="../guide.html">Guide</a>
         <a class="is-active" href="index.html">Blog</a>
         <a href="../download.html">Download</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../faq.html">FAQ</a>
         <form class="search-form" data-search-form data-search-action="../search.html">
           <input name="q" type="search" placeholder="proxy, vpn, ip..." aria-label="Search site">
         </form>
+        <a class="btn-ghost" href="https://t.me/miragespoofer_root">Join Group</a>
+        <a class="btn-solid" href="https://t.me/Miragespoofer">Admin</a>
       </nav>
     </div>
   </header>
   <main class="section">
     <div class="wrap">
       <nav class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Blog</a> / <span>Proxy / IP</span></nav>
-      <article class="card">
-        <p class="muted">17 Aug 2026 · Official blog</p>
-        <h1>Proxy connect, VPN tunnel, and spoof IP</h1>
-        <p class="muted"><strong>Proxy connect</strong> is per profile: host, port, HTTP or SOCKS, optional login. When you switch to that profile the Helper turns the proxy on. A new profile starts with proxy off so credentials do not bleed.</p>
-        <p class="hi">Har profile ka proxy. Switch pe connect. IP GPS se nahi badalta.</p>
-        <h2>Three names, one flow</h2>
-        <ul class="muted">
-          <li><a href="../proxy.html">Proxy connect</a> — you bring the server; Mirage routes the target app.</li>
-          <li><a href="../vpn.html">VPN</a> — the Helper can hide that tunnel so apps do not show a VPN flag. This is not a NordVPN-style plan.</li>
-          <li><a href="../spoof-ip.html">Spoof IP</a> — apps see the proxy exit address, not home Wi-Fi or SIM IP.</li>
+      <article class="card post-article">
+        <div class="post-hero ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <div>
+            <p class="blog-meta">17 Aug 2026 · 7 min read · Network</p>
+            <h1>Proxy connect, VPN tunnel, and spoof IP</h1>
+            <p class="muted">You bring the proxy server. Mirage Spoofer turns it on per profile so target apps can spoof IP. This is not a sold VPN subscription like NordVPN — Helper routes your proxy, optionally through a hidden tunnel.</p>
+          </div>
+        </div>
+        <div class="post-body">
+        <p class="hi">Profile pe host, port, type, optional login. Switch pe Helper proxy on. Nayi profile pe proxy off. Public IP GPS se nahi badalta.</p>
+        <h2>Proxy connect</h2>
+        <p>On the profile, enter host, port, HTTP or SOCKS, optional user and pass, then enable proxy. Switch to that profile: Helper sends the on command. Leave the profile: proxy goes off. New profiles start with proxy disabled so old credentials do not bleed into a fresh identity. Details: <a href="../proxy.html">proxy connect</a>.</p>
+        <p>Use a proxy you control or a provider you already pay for. Dead host, wrong port, or HTTP vs SOCKS mismatch is why “IP did not change” reports happen — not because the map pin failed.</p>
+        <h2>VPN tunnel (hide transport)</h2>
+        <p>The Helper can run that route through a tunnel and hide VPN transport from apps in LSPosed scope. Target apps should not show a generic “you are on a VPN” flag the way a consumer VPN app often does. It is still your proxy. See <a href="../vpn.html">VPN</a>.</p>
+        <div class="post-callout"><strong>Not included:</strong> Mirage does not sell you an IP. No built-in “US server list.” You paste the endpoint on the profile.</div>
+        <h2>Spoof IP</h2>
+        <p>Apps then see the proxy exit IP, not home Wi-Fi or SIM. Map GPS alone never changes public IP. Pair with <a href="spoof-location-with-timezone.html">location + timezone</a> in the same country when you use all three. Page: <a href="../spoof-ip.html">spoof IP</a>.</p>
+        <h2>Checklist</h2>
+        <ol>
+          <li>Helper module installed and enabled after reboot.</li>
+          <li>Target app in <a href="enable-lsposed-module.html">LSPosed scope</a>.</li>
+          <li>Working proxy (you provide host / port / type).</li>
+          <li>Switch the profile that has proxy on — do not test from a profile where proxy is off.</li>
+          <li>GPS pin and timezone in the same region as that IP when you use all three.</li>
+        </ol>
+        <h2>If IP stays on home Wi-Fi</h2>
+        <ul>
+          <li>Confirm the profile actually has proxy enabled (new profiles default off).</li>
+          <li>Confirm Helper is running — without the zip, PROXY_ON never happens.</li>
+          <li>Force-stop the scoped app after switch, then open it again.</li>
+          <li>Test the same host:port from another client to prove the proxy itself works.</li>
         </ul>
-        <p class="muted">Match proxy country with <a href="spoof-location-with-timezone.html">location and timezone</a> so GPS, clock, and IP sit in one region. Helper + LSPosed required.</p>
-        <p class="muted">FOR EDUCATIONAL AND LEARNING PURPOSES ONLY.</p>
-        <p><a class="btn-ghost" href="index.html">All posts</a></p>
+        <div class="post-warn">FOR EDUCATIONAL AND LEARNING PURPOSES ONLY. Comply with local laws. Do not use proxies to commit fraud.</div>
+        <h2>Related posts</h2>
+        <div class="related-posts">
+          <a href="spoof-location-with-timezone.html"><strong>Location + timezone</strong><span>Match the pin with the proxy country.</span></a>
+          <a href="install-mirage-spoofer.html"><strong>Install v21.38</strong><span>Helper must be present for proxy on.</span></a>
+          <a href="enable-lsposed-module.html"><strong>LSPosed scope</strong><span>Tunnel hide only inside scoped apps.</span></a>
+        </div>
+        <p class="post-actions"><a class="btn-ghost" href="index.html">All posts</a> <a class="btn-ghost" href="../proxy.html">Proxy page</a></p>
+        </div>
       </article>
     </div>
   </main>
   <footer class="site-footer"><p class="fine">Official site: miragespoof.in</p></footer>
-  <script src="../js/nav.js?v=32"></script>
+  <script src="../js/nav.js?v=33"></script>
 </body>
 </html>

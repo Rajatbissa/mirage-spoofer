@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enable Mirage Spoofer in LSPosed | Official Blog</title>
-  <meta name="description" content="Enable Mirage Spoofer in LSPosed: install Helper and APK, turn the module on, select target apps in scope, reboot. Rooted Android identity engine.">
+  <meta name="description" content="Enable Mirage Spoofer in LSPosed Manager: turn the module on, tick each target app in scope, reboot. Identity, location, and proxy only apply inside scope.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.miragespoof.in/blog/enable-lsposed-module.html">
   <link rel="icon" href="../logo-mark.png" type="image/png">
   <meta property="og:title" content="Enable Mirage Spoofer in LSPosed">
+  <meta property="og:description" content="Module on, tick target apps, reboot. Official how-to for rooted Android.">
   <meta property="og:url" content="https://www.miragespoof.in/blog/enable-lsposed-module.html">
   <meta property="og:type" content="article">
-  <link rel="stylesheet" href="../css/style.css?v=27">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=29">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Enable Mirage Spoofer in LSPosed","datePublished":"2026-08-17","author":{"@type":"Organization","name":"Mirage Spoofer"},"mainEntityOfPage":"https://www.miragespoof.in/blog/enable-lsposed-module.html"}
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Enable Mirage Spoofer in LSPosed","description":"Turn the module on, pick each target app in scope, reboot.","datePublished":"2026-08-17","author":{"@type":"Organization","name":"Mirage Spoofer"},"mainEntityOfPage":"https://www.miragespoof.in/blog/enable-lsposed-module.html"}
   </script>
   <script src="../js/analytics.js?v=30"></script>
 </head>
@@ -23,36 +25,68 @@
       <a class="logo" href="../index.html"><img src="../logo-mark.png" width="36" height="36" alt="Mirage Spoofer">MIRAGE<span>SPOOFER</span></a>
       <button class="nav-toggle" data-nav-toggle type="button" aria-expanded="false" aria-label="Open menu"><span></span></button>
       <nav class="nav-drawer" data-nav-drawer>
+        <a href="../features.html">Features</a>
         <a href="../guide.html">Guide</a>
         <a class="is-active" href="index.html">Blog</a>
         <a href="../download.html">Download</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../faq.html">FAQ</a>
         <form class="search-form" data-search-form data-search-action="../search.html">
           <input name="q" type="search" placeholder="lsposed, scope..." aria-label="Search site">
         </form>
+        <a class="btn-ghost" href="https://t.me/miragespoofer_root">Join Group</a>
+        <a class="btn-solid" href="https://t.me/Miragespoofer">Admin</a>
       </nav>
     </div>
   </header>
   <main class="section">
     <div class="wrap">
       <nav class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Blog</a> / <span>LSPosed</span></nav>
-      <article class="card">
-        <p class="muted">17 Aug 2026 · Official blog</p>
-        <h1>Enable Mirage Spoofer in LSPosed</h1>
-        <p class="muted">Mirage Spoofer hooks target apps through LSPosed. If the module is off, or the app is not in scope, identity, location, and proxy will not apply to that app.</p>
-        <p class="hi">LSPosed me module on + target apps select. Scope ke bahar hook nahi.</p>
-        <h2>Steps</h2>
-        <ol class="muted">
-          <li>Finish <a href="install-mirage-spoofer.html">install</a>: Helper zip, then APK v21.38.</li>
-          <li>Open LSPosed Manager. Find Mirage Spoofer. Enable it.</li>
-          <li>Open scope. Tick only the apps you want hooked. Do not rely on select-all.</li>
-          <li>Reboot so hooks load. Open Mirage Spoofer and allow root.</li>
+      <article class="card post-article">
+        <div class="post-hero ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>
+          <div>
+            <p class="blog-meta">17 Aug 2026 · 5 min read · LSPosed</p>
+            <h1>Enable Mirage Spoofer in LSPosed</h1>
+            <p class="muted">Hooks run only in apps you tick in scope. Module off, or the app missing from the list, means real IDs, GPS, and IP stay. This is the step people skip — then they say “nothing changed.”</p>
+          </div>
+        </div>
+        <div class="post-body">
+        <p class="hi">LSPosed Manager me Mirage on karo, har target app tick karo, reboot. Scope ke bahar identity, location, proxy kuch nahi badlega.</p>
+        <h2>Before LSPosed</h2>
+        <p>Finish <a href="install-mirage-spoofer.html">install</a>: Helper zip, reboot, then APK v21.38. LSPosed itself must already run on Magisk or KernelSU. If LSPosed Manager does not open, fix that first — Mirage cannot hook without it. More context: <a href="../lsposed.html">LSPosed page</a>.</p>
+        <h2>Enable and scope</h2>
+        <ol>
+          <li>Open LSPosed Manager → Modules.</li>
+          <li>Find Mirage Spoofer. Turn it on.</li>
+          <li>Open recommended / scope. Tick each target app one by one.</li>
+          <li>Do not depend on select-all — LSPosed often blocks it, and you think everything is scoped when it is not.</li>
+          <li>Reboot. Open Mirage Spoofer and allow root.</li>
         </ol>
-        <p class="muted">Same flow with extra notes: <a href="../lsposed.html">LSPosed page</a>. FOR EDUCATIONAL AND LEARNING PURPOSES ONLY.</p>
-        <p><a class="btn-ghost" href="index.html">All posts</a></p>
+        <div class="post-callout"><strong>Scope is the list that matters.</strong> System apps, browsers, and games you did not tick keep the real device. That is by design.</div>
+        <h2>After that</h2>
+        <p>Switch the profile from Home or the floating widget, then open the scoped app. If the old identity sticks, force-stop that app once. Widget can switch without leaving the app, but a cold start is the clean test.</p>
+        <h2>If hooks still miss</h2>
+        <ul class="check-list">
+          <li>Module toggle is on after reboot (some builds reset it).</li>
+          <li>The exact package is ticked — not a look-alike clone.</li>
+          <li>Helper zip is installed; LSPosed alone is not the full stack.</li>
+          <li>You switched the Mirage profile before opening the app.</li>
+        </ul>
+        <p>Screenshots and first-run notes: <a href="../guide.html">guide</a>.</p>
+        <div class="post-warn">FOR EDUCATIONAL AND LEARNING PURPOSES ONLY. Comply with local laws.</div>
+        <h2>Related posts</h2>
+        <div class="related-posts">
+          <a href="install-mirage-spoofer.html"><strong>Install v21.38</strong><span>Helper and APK before you touch scope.</span></a>
+          <a href="spoof-location-with-timezone.html"><strong>Location + timezone</strong><span>GPS only applies inside scoped apps.</span></a>
+          <a href="proxy-connect-spoof-ip.html"><strong>Proxy + spoof IP</strong><span>Tunnel hide is also scope-based.</span></a>
+        </div>
+        <p class="post-actions"><a class="btn-ghost" href="index.html">All posts</a> <a class="btn-ghost" href="../lsposed.html">LSPosed page</a></p>
+        </div>
       </article>
     </div>
   </main>
   <footer class="site-footer"><p class="fine">Official site: miragespoof.in</p></footer>
-  <script src="../js/nav.js?v=32"></script>
+  <script src="../js/nav.js?v=33"></script>
 </body>
 </html>
