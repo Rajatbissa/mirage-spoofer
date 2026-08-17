@@ -1,7 +1,16 @@
 User-agent: *
 Allow: /
+Allow: /favicon.ico
+Allow: /favicon-192.png
+Allow: /logo-mark.png
 Disallow: /admin/
 Disallow: /app_update.json
+
+User-agent: Googlebot-Image
+Allow: /favicon.ico
+Allow: /favicon-192.png
+Allow: /logo-mark.png
+Allow: /apple-touch-icon.png
 
 Host: www.miragespoof.in
 Sitemap: https://www.miragespoof.in/sitemap.xml
