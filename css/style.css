@@ -365,22 +365,11 @@ h1 span {
   transform-style: preserve-3d;
   animation: india-card-float 5s ease-in-out infinite;
 }
-.india-flag {
-  display: flex; align-items: stretch; height: 48px;
-  transform-style: preserve-3d;
+.in-flag {
+  display: inline-flex; width: 28px; height: 19px; border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.18); overflow: hidden; flex-shrink: 0;
 }
-.flag-pole {
-  width: 3px; border-radius: 2px;
-  background: linear-gradient(180deg, #e8e4f5, #8b83a8);
-  box-shadow: 1px 0 2px rgba(0,0,0,0.35);
-  z-index: 2;
-}
-.flag-cloth {
-  width: 72px; height: 48px;
-  overflow: hidden;
-  box-shadow: 1px 2px 4px rgba(0,0,0,0.35);
-}
-.flag-cloth svg { display: block; width: 72px; height: 48px; }
+.in-flag svg { display: block; width: 28px; height: 19px; }
 .india-copy { text-align: left; line-height: 1.15; }
 .india-copy span {
   display: block; font-size: 0.68rem; font-weight: 700;
