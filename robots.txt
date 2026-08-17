@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /app_update.json
 
+Host: www.miragespoof.in
 Sitemap: https://www.miragespoof.in/sitemap.xml

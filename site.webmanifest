@@ -1,0 +1,18 @@
+{
+  "name": "Mirage Spoofer",
+  "short_name": "Mirage",
+  "description": "Official Mirage Spoofer for rooted Android. Bulk profiles, floating widget, backup and restore.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "lang": "en-IN",
+  "background_color": "#120E1F",
+  "theme_color": "#120E1F",
+  "icons": [
+    {
+      "src": "logo-mark.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ]
+}
