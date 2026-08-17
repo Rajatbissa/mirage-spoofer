@@ -8,7 +8,7 @@ import { RoundedBoxGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/e
 
   var wrap = canvas.parentElement;
   var fallback = document.getElementById("phoneFallback");
-  var reducedQuality = window.matchMedia("(max-width: 700px)").matches;
+  var reducedQuality = window.matchMedia("(max-width: 900px)").matches;
 
   function measure() {
     var w = Math.max(wrap.clientWidth, 280);
@@ -49,23 +49,6 @@ import { RoundedBoxGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/e
 
   var stage = new THREE.Group();
   scene.add(stage);
-
-  var floor = new THREE.Mesh(
-    new THREE.CircleGeometry(3.4, 64),
-    new THREE.MeshStandardMaterial({ color: 0x1b1330, metalness: 0.2, roughness: 0.85, transparent: true, opacity: 0.55 })
-  );
-  floor.rotation.x = -Math.PI / 2;
-  floor.position.y = -2.05;
-  floor.receiveShadow = true;
-  stage.add(floor);
-
-  var glowRing = new THREE.Mesh(
-    new THREE.TorusGeometry(1.55, 0.018, 16, 80),
-    new THREE.MeshBasicMaterial({ color: 0x00e5ff, transparent: true, opacity: 0.55 })
-  );
-  glowRing.rotation.x = Math.PI / 2;
-  glowRing.position.y = -2.02;
-  stage.add(glowRing);
 
   function loadTexture(path) {
     return new Promise(function (resolve, reject) {
@@ -181,7 +164,6 @@ import { RoundedBoxGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/e
       phone.position.y = 0.12 + floatY;
       phone.rotation.y += ((mouse.x * 0.45) - phone.rotation.y) * 0.06;
       phone.rotation.x += ((-mouse.y * 0.18) - phone.rotation.x) * 0.06;
-      glowRing.rotation.z = t * 0.25;
       if (leftCard) {
         leftCard.position.y = 0.35 + Math.sin(t * 0.8 + 1) * 0.12;
         leftCard.rotation.z = Math.sin(t * 0.5) * 0.04;

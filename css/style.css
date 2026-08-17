@@ -18,10 +18,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background:
-    radial-gradient(900px 500px at 85% 20%, rgba(0, 229, 255, 0.12), transparent 55%),
-    radial-gradient(700px 420px at 10% 80%, rgba(124, 77, 255, 0.18), transparent 50%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   line-height: 1.6;
@@ -86,14 +83,21 @@ a { color: var(--primary-2); }
 
 .hero {
   display: grid; grid-template-columns: 1fr 1.05fr; gap: 24px; align-items: center;
-  padding: 48px 0 36px;
+  padding: 40px 0 28px;
   position: relative;
-  min-height: min(88vh, 820px);
 }
+.hero-copy { position: relative; z-index: 2; }
 .hero-visual {
   position: relative;
-  height: min(72vh, 640px);
-  min-height: 420px;
+  z-index: 1;
+  height: 560px;
+  overflow: hidden;
+  border-radius: 24px;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 70%, rgba(0, 229, 255, 0.16), transparent 58%),
+    radial-gradient(circle at 20% 20%, rgba(124, 77, 255, 0.22), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(255, 46, 159, 0.14), transparent 42%);
 }
 #phone3d {
   position: absolute;
@@ -101,14 +105,19 @@ a { color: var(--primary-2); }
   width: 100%;
   height: 100%;
   display: block;
+  pointer-events: none;
 }
 #phoneFallback {
-  position: absolute; inset: 8% 18%;
-  width: auto; height: auto; max-height: 84%;
-  margin: auto; border-radius: 28px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.45), 0 0 60px rgba(0,229,255,0.2);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(240px, 55%);
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 24px 50px rgba(0,0,0,0.4);
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  z-index: 0;
 }
 .hero-stats {
   display: flex; flex-wrap: wrap; gap: 18px; margin-top: 28px;
@@ -130,11 +139,7 @@ a { color: var(--primary-2); }
 
 .site-header, main, .site-footer, .skip-link { position: relative; z-index: 1; }
 .site-header { z-index: 40; }
-.will-reveal {
-  opacity: 0; transform: translateY(28px) scale(0.98);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.will-reveal.is-in { opacity: 1; transform: none; }
+.will-reveal.is-in { transform: none; }
 
 .btn-main, .btn-solid { transition: transform 0.15s ease, box-shadow 0.15s ease; }
 .btn-main:hover, .btn-solid:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0, 229, 255, 0.35); }
@@ -163,6 +168,9 @@ h1 span { color: var(--primary-2); }
 .card, .work-card, .price-card, .g-box {
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px;
 }
+.grid-3 .card:nth-child(1) { border-top: 3px solid var(--primary-2); }
+.grid-3 .card:nth-child(2) { border-top: 3px solid var(--primary); }
+.grid-3 .card:nth-child(3) { border-top: 3px solid var(--pink); }
 .work-card { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; margin-bottom: 20px; }
 .work-card.reverse { direction: rtl; }
 .work-card.reverse > * { direction: ltr; }
@@ -225,7 +233,7 @@ h1 span { color: var(--primary-2); }
   .hero, .work-card, .grid-2, .grid-3, .price-grid { grid-template-columns: 1fr; }
   .work-card.reverse { direction: ltr; }
   .price-card.pro { transform: none; }
-  .hero { padding: 28px 0 12px; text-align: center; min-height: 0; }
-  .hero-visual { height: 460px; min-height: 380px; }
+  .hero { padding: 20px 0 8px; text-align: center; min-height: 0; }
+  .hero-visual { height: 300px; }
   .hero-actions, .hero-stats { justify-content: center; }
 }
