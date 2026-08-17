@@ -45,8 +45,6 @@
   </script>
 </head>
 <body>
-  <canvas id="bg3d" aria-hidden="true"></canvas>
-  <div class="cursor-glow" hidden></div>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-inner">
@@ -79,18 +77,17 @@
           <a class="btn-ghost" href="guide.html">Install guide</a>
         </div>
         <p class="warn">Helper Magisk / KernelSU module pehle install karo, warna app crash ho sakti hai.</p>
+        <div class="hero-stats">
+          <div class="stat"><b data-count="100" data-suffix="+">0+</b><span>Bulk profiles</span></div>
+          <div class="stat"><b>v21.36</b><span>Official APK</span></div>
+          <div class="stat"><b>RTC</b><span>Timezone sync</span></div>
+        </div>
       </div>
-      <div class="hero-stage" data-tilt>
-        <img class="hero-shot" src="images/hero-app.png" width="320" alt="Mirage Spoofer Android app home screen">
+      <div class="hero-visual">
+        <img id="phoneFallback" class="hero-shot" src="images/hero-app.png" width="320" alt="Mirage Spoofer Android app">
+        <canvas id="phone3d" aria-hidden="true"></canvas>
       </div>
     </section>
-
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>Root</span><span>Root module</span><span>Spoofer</span><span>RTC</span><span>IMEI</span><span>Android ID</span><span>Magisk</span><span>KernelSU</span>
-        <span>Root</span><span>Root module</span><span>Spoofer</span><span>RTC</span><span>IMEI</span><span>Android ID</span><span>Magisk</span><span>KernelSU</span>
-      </div>
-    </div>
 
     <section class="section alt">
       <div class="wrap">

@@ -1,44 +1,50 @@
 (function () {
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  var glow = document.querySelector(".cursor-glow");
-  if (glow && window.matchMedia("(pointer: fine)").matches) {
-    glow.hidden = false;
-    window.addEventListener("pointermove", function (event) {
-      glow.style.transform = "translate(" + (event.clientX - 160) + "px, " + (event.clientY - 160) + "px)";
-    }, { passive: true });
-  }
-
-  if (!reduced) {
-    var reveal = document.querySelectorAll("[data-reveal], .card, .work-card, .price-card, .g-box, .news-list li, .keyword-block");
+  document.querySelectorAll("[data-count]").forEach(function (el) {
+    var end = parseInt(el.getAttribute("data-count"), 10);
+    if (!end) return;
+    var started = false;
+    function run() {
+      if (started) return;
+      started = true;
+      var start = performance.now();
+      var dur = 1100;
+      function step(now) {
+        var p = Math.min(1, (now - start) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(end * eased) + (el.getAttribute("data-suffix") || "");
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
     if ("IntersectionObserver" in window) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-in");
-            io.unobserve(entry.target);
+            run();
+            io.disconnect();
           }
         });
-      }, { threshold: 0.12 });
-      reveal.forEach(function (el) {
-        el.classList.add("will-reveal");
-        io.observe(el);
-      });
-    }
-  }
+      }, { threshold: 0.4 });
+      io.observe(el);
+    } else run();
+  });
 
-  var tiltTargets = document.querySelectorAll("[data-tilt], .hero-stage, .card, .price-card");
-  if (!reduced && window.matchMedia("(pointer: fine)").matches) {
-    tiltTargets.forEach(function (el) {
-      el.addEventListener("pointermove", function (event) {
-        var box = el.getBoundingClientRect();
-        var x = (event.clientX - box.left) / box.width - 0.5;
-        var y = (event.clientY - box.top) / box.height - 0.5;
-        el.style.transform = "rotateY(" + (x * 14) + "deg) rotateX(" + (-y * 10) + "deg) translateZ(8px)";
+  if (reduced) return;
+  var reveal = document.querySelectorAll("[data-reveal], .card, .work-card, .price-card, .g-box, .news-list li, .keyword-block, .stat");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        }
       });
-      el.addEventListener("pointerleave", function () {
-        el.style.transform = "";
-      });
+    }, { threshold: 0.12 });
+    reveal.forEach(function (el) {
+      el.classList.add("will-reveal");
+      io.observe(el);
     });
   }
 })();
