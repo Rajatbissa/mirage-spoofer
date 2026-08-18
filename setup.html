@@ -21,7 +21,7 @@
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://www.miragespoof.in/images/hero-app.png">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=40">
+  <link rel="stylesheet" href="css/style.css?v=41">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,69 +73,109 @@
     </div>
   </header>
   <main class="section">
-    <div class="wrap legal">
+    <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span>Setup</span></nav>
-      <h1>Setup</h1>
-      <p class="muted">Get started with Mirage Spoofer — installation and configuration on rooted Android.</p>
-      <p class="hi">Rooted Android. Helper zip pehle, phir APK, phir LSPosed.</p>
-      <p>
-        <a class="btn-main" href="download.html">Download files</a>
-        <a class="btn-ghost" href="telegram.html">Official Telegram</a>
-      </p>
+      <div class="section-head">
+        <span class="ico setup-hero-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09A1.65 1.65 0 0 0 15 4.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+        <h1>Setup</h1>
+        <p class="muted">Get started with Mirage Spoofer — installation and configuration on rooted Android.</p>
+        <p class="hi">Rooted Android. Helper zip pehle, phir APK, phir LSPosed.</p>
+        <p>
+          <a class="btn-main" href="download.html">Download files</a>
+          <a class="btn-ghost" href="telegram.html">Official Telegram</a>
+        </p>
+      </div>
 
       <h2>Prerequisites</h2>
-      <ul class="check-list">
-        <li>Rooted Android — Magisk or KernelSU</li>
-        <li>LSPosed (Zygisk) for hooks in target apps</li>
-        <li>Official Helper root module — install before the APK or the app can crash</li>
-        <li>Backup your ROM and important data first</li>
-      </ul>
+      <div class="grid-2 setup-icons">
+        <article class="card ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M12 18h.01"/></svg></span>
+          <h3>Rooted Android</h3>
+          <p class="muted">Magisk or KernelSU.</p>
+        </article>
+        <article class="card ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3v4"/><rect x="5" y="7" width="14" height="14" rx="2"/></svg></span>
+          <h3>LSPosed</h3>
+          <p class="muted">Zygisk module for hooks in target apps.</p>
+        </article>
+        <article class="card ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span>
+          <h3>Helper module</h3>
+          <p class="muted">Install before the APK or the app can crash.</p>
+        </article>
+        <article class="card ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></span>
+          <h3>Backup first</h3>
+          <p class="muted">ROM and important data before you start.</p>
+        </article>
+      </div>
 
       <h2>Installation steps</h2>
-      <h3>Step 1 — Helper root module</h3>
-      <ol class="muted">
-        <li>Download the official Helper zip from the <a href="download.html">download page</a>.</li>
-        <li>Install it in Magisk or KernelSU as a module.</li>
-        <li>Reboot.</li>
-      </ol>
-      <h3>Step 2 — Install Mirage Spoofer</h3>
-      <ol class="muted">
-        <li>Download <a href="apk.html">Mirage Spoofer v21.38</a> from this site or GitHub.</li>
-        <li>Install the APK. Allow unknown sources if Android asks.</li>
-        <li>Open the app and allow root.</li>
-      </ol>
-      <h3>Step 3 — Enable in LSPosed</h3>
-      <ol class="muted">
-        <li>Open LSPosed Manager → Modules.</li>
-        <li>Enable Mirage Spoofer.</li>
-        <li>Select each target app in scope.</li>
-        <li>Reboot.</li>
-      </ol>
-      <h3>Step 4 — Account</h3>
-      <ol class="muted">
-        <li>Register or log in with email.</li>
-        <li>License and device bind (1 account = 1 device) apply after login.</li>
-      </ol>
-      <h3>Step 5 — First profile</h3>
-      <ol class="muted">
-        <li>Create or bulk-create a profile.</li>
-        <li>Pick a target app and switch from the floating widget.</li>
-        <li>Force-stop the target app, then open it again.</li>
-      </ol>
+      <div class="setup-steps">
+        <article class="card ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span>
+          <h3>Step 1 — Helper root module</h3>
+          <ol class="muted">
+            <li>Download the official Helper zip from the <a href="download.html">download page</a>.</li>
+            <li>Install it in Magisk or KernelSU as a module.</li>
+            <li>Reboot.</li>
+          </ol>
+        </article>
+        <article class="card ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M12 18h.01"/></svg></span>
+          <h3>Step 2 — Install Mirage Spoofer</h3>
+          <ol class="muted">
+            <li>Download <a href="apk.html">Mirage Spoofer v21.38</a> from this site or GitHub.</li>
+            <li>Install the APK. Allow unknown sources if Android asks.</li>
+            <li>Open the app and allow root.</li>
+          </ol>
+        </article>
+        <article class="card ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <h3>Step 3 — Enable in LSPosed</h3>
+          <ol class="muted">
+            <li>Open LSPosed Manager → Modules.</li>
+            <li>Enable Mirage Spoofer.</li>
+            <li>Select each target app in scope.</li>
+            <li>Reboot.</li>
+          </ol>
+        </article>
+        <article class="card ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+          <h3>Step 4 — Account</h3>
+          <ol class="muted">
+            <li>Register or log in with email.</li>
+            <li>License and device bind (1 account = 1 device) apply after login.</li>
+          </ol>
+        </article>
+        <article class="card ico-card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h6M7 16h8"/></svg></span>
+          <h3>Step 5 — First profile</h3>
+          <ol class="muted">
+            <li>Create or bulk-create a profile.</li>
+            <li>Pick a target app and switch from the floating widget.</li>
+            <li>Force-stop the target app, then open it again.</li>
+          </ol>
+        </article>
+      </div>
 
       <h2>Need help?</h2>
-      <p class="muted">Official Telegram — setup help, license, updates.</p>
-      <p>
-        <a class="btn-solid" href="https://t.me/Miragespoofer">Admin @Miragespoofer</a>
-        <a class="btn-ghost" href="https://t.me/miragespoofer_root">Group</a>
-      </p>
+      <article class="card ico-card">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+        <h3>Official Telegram</h3>
+        <p class="muted">Setup help, license, updates.</p>
+        <p>
+          <a class="btn-solid" href="https://t.me/Miragespoofer">Admin @Miragespoofer</a>
+          <a class="btn-ghost" href="https://t.me/miragespoofer_root">Group</a>
+        </p>
+      </article>
       <p><a href="guide.html">Longer guide</a> · <a href="docs/">Docs</a> · <a href="faq.html">FAQ</a></p>
     </div>
   </main>
   <footer class="site-footer">
     <p class="fine">FOR EDUCATIONAL AND LEARNING PURPOSES ONLY.</p>
   </footer>
-  <script src="js/nav.js?v=42"></script>
+  <script src="js/nav.js?v=43"></script>
   <script src="js/motion.js"></script>
 </body>
 </html>

@@ -206,7 +206,14 @@ h1 span {
 
 .section { padding: 64px 0; }
 .section.alt { background: var(--bg-2); }
-.section-head { text-align: center; max-width: 640px; margin: 0 auto 36px; }
+.section-head .setup-hero-ico {
+  width: 56px; height: 56px; margin: 0 auto 12px;
+  display: grid; place-items: center;
+  border-radius: 16px;
+  background: rgba(0, 229, 255, 0.12); color: var(--primary-2);
+}
+.setup-steps { display: grid; gap: 16px; margin: 0 0 28px; }
+.setup-steps .ico-card ol { margin: 8px 0 0; padding-left: 18px; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .card, .work-card, .price-card, .g-box {
