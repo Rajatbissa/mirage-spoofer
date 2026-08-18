@@ -1,29 +1,15 @@
-🚀 Mirage Master Helper v8.0 - [FINAL STABLE]
-The Ultimate Android Identity Management & Stealth Network Engine.
+# 🛡️ Mirage Helper v12
 
-Welcome to the biggest update of the Mirage Master Helper! Version 8.0 brings an entirely rewritten core engine designed for Enterprise-Grade Network Privacy, Deep System Cleaning, and Seamless App Session Switching.
+Target apps ke liye naya **anti-detection layer**. Purane Helper se upgrade karo, reboot.
 
-Whether you are managing multiple accounts or routing specific apps through secure proxies, v8.0 handles it flawlessly at the kernel level.
+### ✨ Naya kya aaya
 
-🌟 Key Features & User Benefits
-🛡️ 1. Bulletproof Proxy Engine (Zero IP Leaks)
-Per-App Stealth Routing: Select specific apps to route through your SOCKS5 proxy while the rest of your phone uses normal internet.
+- 🗂️ **Mount hide** — Magisk, `su`, `/data/adb` target app ko folder ki tarah nahi dikhte  
+- 📄 **Maps filter** — `/proc/maps` file se magisk / lsposed / mirage lines hata ke saaf copy bind  
+- 🎯 **Auto STEALTH** — jo apps tick hain, chalte hi hide (backup/restore ke time skip)  
+- 👻 **Java + Helper** — APK me Anti-Root on rakho: Magisk / LSPosed / Mirage list se bhi gayab  
 
-Kernel-Level Firewall (iptables): Completely re-engineered routing using advanced fwmark and iptables. Your original IP (both IPv4 and IPv6) is strictly locked out from leaking.
+### ⚠️ Limit
 
-Smart Proxy Validation: Built-in intelligent SOCKS5 checker that actively verifies true internet data flow before connecting, ensuring you never get stuck on a "Dead" connection.
+Play Integrity / RAM scan nahi. Folder + APK list + maps **file** hide.
 
-🧹 2. Deep Wipe & Anti-Tracking
-Aggressive App Cleaning: One-tap complete wipe of targeted apps. It doesn't just clear data; it hunts down and destroys deep code_cache, hidden app_webview traces, and native memory buffers.
-
-Universal AdID Reset: Automatically resets Google Advertising ID traces globally to protect your device identity footprint.
-
-♻️ 3. Seamless Session Switcher (Insta-Login Saver)
-Device-Encrypted (DE) Backup Support: Switching accounts on strict apps (like Instagram) will no longer log you out! The new engine backs up and restores encrypted Keystore paths perfectly.
-
-Automated Permissions Fix: Automatically restores proper SELinux contexts and UID ownerships during session restores, preventing mysterious app crashes.
-
-💾 4. Full Export & Import (SD Card Support)
-Portable Identities: Easily export your entire session ecosystem (including JSON identity profiles and app data) directly to your external SD Card (/sdcard/MirageBackups).
-
-Quick Migration: Import entire sessions back into the secure internal storage with a single tap.
