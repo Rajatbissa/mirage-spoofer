@@ -1,5 +1,17 @@
 window.MIRAGE_SEARCH_INDEX = [
   {
+    title: "Setup",
+    url: "setup.html",
+    tags: ["setup", "install", "getting started", "root", "helper", "lsposed"],
+    text: "Setup Mirage Spoofer: Magisk or KernelSU, Helper module, official APK v21.38, LSPosed, login. Official Telegram for help."
+  },
+  {
+    title: "Telegram",
+    url: "telegram.html",
+    tags: ["telegram", "admin", "group", "support", "t.me"],
+    text: "Official Mirage Spoofer Telegram. Admin t.me/Miragespoofer and group t.me/miragespoofer_root."
+  },
+  {
     title: "How to install Mirage Spoofer",
     url: "guide.html#install",
     tags: ["install", "setup", "apk", "download", "root", "helper", "root module"],
