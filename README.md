@@ -3,6 +3,8 @@
 Official **rooted Android** identity engine (LSPosed + Magisk / KernelSU Helper).
 
 **Website:** [https://www.miragespoof.in/](https://www.miragespoof.in/)  
+**Setup:** [https://www.miragespoof.in/setup.html](https://www.miragespoof.in/setup.html)  
+**Telegram:** [https://www.miragespoof.in/telegram.html](https://www.miragespoof.in/telegram.html) · [Admin](https://t.me/Miragespoofer) · [Group](https://t.me/miragespoofer_root)  
 **Latest APK:** [Mirage Spoofer v21.38](https://github.com/Rajatbissa/mirage-spoofer/releases/tag/v21.38)  
 **Helper module:** [MirageHelper zip](https://github.com/user-attachments/files/25545210/MirageHelper2.1.zip)
 
@@ -64,4 +66,6 @@ Keep the public group/about text pointing at **https://www.miragespoof.in/**.
 - [VPN](https://www.miragespoof.in/vpn.html)
 - [Spoof IP](https://www.miragespoof.in/spoof-ip.html)
 - [Blog](https://www.miragespoof.in/blog/)
-- [Setup](https://www.miragespoof.in/docs/setup.html)
+- [Setup](https://www.miragespoof.in/setup.html)
+- [Telegram](https://www.miragespoof.in/telegram.html)
+- [Root module](https://www.miragespoof.in/root-module.html)
