@@ -194,7 +194,43 @@ window.MIRAGE_SEARCH_INDEX = [
   {
     title: "FAQ",
     url: "faq.html",
-    tags: ["faq", "help", "root", "helper", "spoofer"],
-    text: "Common questions about install, root, helper module, and licenses."
+    tags: ["faq", "help", "root", "helper", "spoofer", "geergit", "mantle"],
+    text: "Common questions about install, root, helper module, licenses, Geergit and Mantle alternatives."
+  },
+  {
+    title: "Device ID changer",
+    url: "device-id-changer.html",
+    tags: ["device id changer", "android id changer", "ssaid", "android id", "device id changer apk"],
+    text: "Device ID changer for rooted Android: Android ID, SSAID, IMEI, Ad-ID per LSPosed profile."
+  },
+  {
+    title: "Geergit alternative",
+    url: "geergit-alternative.html",
+    tags: ["geergit", "geergit alternative", "geergit xposed", "geergit lsposed"],
+    text: "Mirage Spoofer as a Geergit alternative: LSPosed identity engine, bulk profiles, widget."
+  },
+  {
+    title: "Mantle alternative",
+    url: "mantle-alternative.html",
+    tags: ["mantle", "mantle alternative", "mantle xposed", "mantle lsposed"],
+    text: "Mirage Spoofer as a Mantle alternative: Xposed / LSPosed device identity spoof."
+  },
+  {
+    title: "Xposed module",
+    url: "xposed-module.html",
+    tags: ["xposed", "xposed module", "lsposed module", "xposed device spoof"],
+    text: "Xposed / LSPosed module for device spoof on rooted Android. Enable Mirage in LSPosed scope."
+  },
+  {
+    title: "Geergit vs Mantle vs Mirage",
+    url: "compare.html",
+    tags: ["compare", "geergit vs mirage", "mantle vs mirage", "best device id changer"],
+    text: "Compare Geergit, Mantle, and Mirage Spoofer for rooted Android identity spoof."
+  },
+  {
+    title: "Blog: Change Android device ID",
+    url: "blog/device-id-changer-android.html",
+    tags: ["blog", "device id changer", "android id", "ssaid", "root"],
+    text: "How to change Android device ID on root with Helper, LSPosed, and Mirage profiles."
   }
 ];

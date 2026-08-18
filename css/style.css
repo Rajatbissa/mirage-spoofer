@@ -649,4 +649,22 @@ img.in-flag {
   .post-article { padding: 20px 16px 24px; }
   .post-hero { flex-direction: column; gap: 12px; }
 }
+.table-wrap { overflow-x: auto; margin: 16px 0 8px; -webkit-overflow-scrolling: touch; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 520px; }
+.compare-table th, .compare-table td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.compare-table th { background: var(--bg-2); color: #fff; font-weight: 700; }
+.compare-table td { color: var(--muted); }
+.compare-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+.kw-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 4px; }
+.kw-pills a {
+  display: inline-block; text-decoration: none; color: #e8e2ff;
+  border: 1px solid var(--line); background: var(--bg-2);
+  border-radius: 999px; padding: 6px 12px; font-size: 0.82rem;
+}
+.kw-pills a:hover { border-color: var(--primary-2); }
 
