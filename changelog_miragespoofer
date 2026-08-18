@@ -1,14 +1,27 @@
-Mirage Spoofer v21.38
+🛡️ Mirage Spoofer v21.39
 
-Mirage Spoofer v21.38
+Naya **Anti-Root** update. Target apps ko Magisk / LSPosed / su folders kam dikhte hain.
 
-versionCode: 94
+## ✨ Kya naya hai
 
-## What's new for you
+- 🛡️ **Anti-Root Mode** — su folders, Magisk/LSPosed APK list, aur maps file hide (Settings → Anti-Root)
+- 🎯 **Auto stealth** — Home pe jo apps tick ho, unpe hide automatically lagta hai
+- ⚡ **Plan unlock live** — admin activate kare to app band kiye bina unlock
+- 🏠 **Home tez** — list har baar reload nahi hoti
 
-- Login and home screen stability fixes.
-- App opens and refreshes more reliably after install.
+## 📦 Install
 
-## Install
+1. Neeche se `Mirage_Spoofer_v21.39.apk` download karo  
+2. Purani official app ke upar install karo  
+3. **Mirage Helper v12** (zip) Magisk/KernelSU pe flash karo — bina Helper ke Anti-Root poora nahi chalega  
+4. Reboot → Anti-Root **ON** → LSPosed me target apps scope me rakho
 
-Download `Mirage_Spoofer_v21.38.apk` below and install over your current official app.
+## ⚠️ Limit (seedha)
+
+- ❌ Play Integrity / SafetyNet pass ka promise nahi  
+- ❌ RAM ke andar LSPosed hide nahi hota  
+- ✔️ Ye update folders, app list, aur maps file pe kaam karta hai  
+
+Is APK ke saath **naya Helper zip** zaroori hai. 
+
+*For educational use on devices you own.*
