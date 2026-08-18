@@ -3,7 +3,7 @@ window.MIRAGE_SEARCH_INDEX = [
     title: "Setup",
     url: "setup.html",
     tags: ["setup", "install", "getting started", "root", "helper", "lsposed"],
-    text: "Setup Mirage Spoofer: Magisk or KernelSU, Helper module, official APK v21.38, LSPosed, login. Official Telegram for help."
+    text: "Setup Mirage Spoofer: Magisk or KernelSU, Helper module, official APK v21.39, LSPosed, login. Official Telegram for help."
   },
   {
     title: "Telegram",
@@ -15,7 +15,7 @@ window.MIRAGE_SEARCH_INDEX = [
     title: "How to install Mirage Spoofer",
     url: "guide.html#install",
     tags: ["install", "setup", "apk", "download", "root", "helper", "root module"],
-    text: "Install Helper Magisk KernelSU root module then Mirage Spoofer v21.38 APK and allow root."
+    text: "Install Helper Magisk KernelSU root module then Mirage Spoofer v21.39 APK and allow root."
   },
   {
     title: "How to use Mirage Spoofer",
@@ -68,8 +68,8 @@ window.MIRAGE_SEARCH_INDEX = [
   {
     title: "Download APK and Helper",
     url: "download.html",
-    tags: ["download", "apk", "helper", "v21.38", "root module"],
-    text: "Official Mirage Spoofer v21.38 APK and Helper root module zip."
+    tags: ["download", "apk", "helper", "v21.39", "root module"],
+    text: "Official Mirage Spoofer v21.39 APK and Helper root module zip."
   },
   {
     title: "Root module — Magisk Helper",
@@ -92,8 +92,8 @@ window.MIRAGE_SEARCH_INDEX = [
   {
     title: "Mirage Spoofer APK",
     url: "apk.html",
-    tags: ["apk", "download", "v21.38"],
-    text: "Official Mirage Spoofer APK v21.38 from GitHub."
+    tags: ["apk", "download", "v21.39"],
+    text: "Official Mirage Spoofer APK v21.39 from GitHub."
   },
   {
     title: "Docs hub",
@@ -153,13 +153,13 @@ window.MIRAGE_SEARCH_INDEX = [
     title: "Blog",
     url: "blog/",
     tags: ["blog", "posts", "guide"],
-    text: "Official Mirage Spoofer blog: how to install Helper and APK v21.38, spoof location with timezone, proxy connect, spoof IP, enable LSPosed."
+    text: "Official Mirage Spoofer blog: how to install Helper and APK v21.39, spoof location with timezone, proxy connect, spoof IP, enable LSPosed."
   },
   {
     title: "Blog: How to install Mirage Spoofer",
     url: "blog/install-mirage-spoofer.html",
-    tags: ["blog", "install", "v21.38", "helper"],
-    text: "Install Helper Magisk or KernelSU zip first, reboot, then APK v21.38, then LSPosed scope and allow root."
+    tags: ["blog", "install", "v21.39", "helper"],
+    text: "Install Helper Magisk or KernelSU zip first, reboot, then APK v21.39, then LSPosed scope and allow root."
   },
   {
     title: "Blog: Spoof location with timezone",

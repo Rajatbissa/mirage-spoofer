@@ -5,8 +5,8 @@ Official **rooted Android** identity engine (LSPosed + Magisk / KernelSU Helper)
 **Website:** [https://www.miragespoof.in/](https://www.miragespoof.in/)  
 **Setup:** [https://www.miragespoof.in/setup.html](https://www.miragespoof.in/setup.html)  
 **Telegram:** [https://www.miragespoof.in/telegram.html](https://www.miragespoof.in/telegram.html) · [Admin](https://t.me/Miragespoofer) · [Group](https://t.me/miragespoofer_root)  
-**Latest APK:** [Mirage Spoofer v21.38](https://github.com/Rajatbissa/mirage-spoofer/releases/tag/v21.38)  
-**Helper module:** [MirageHelper zip](https://github.com/user-attachments/files/25545210/MirageHelper2.1.zip)
+**Latest APK:** [Mirage Spoofer v21.39](https://github.com/Rajatbissa/mirage-spoofer/releases/tag/v21.39)  
+**Helper module:** [MirageHelper zip](https://github.com/Rajatbissa/mirage-spoofer/releases/download/V.12/MirageHelpe12.zip)
 
 Always use the same name and URL: **Mirage Spoofer** and `https://www.miragespoof.in/` (one spelling). Titles should say **Android**, **rooted**, and **LSPosed** so we are not mixed with unrelated PC “Mirage Spoofer” cheats.
 
@@ -17,7 +17,7 @@ In the GitHub repo **About**:
 - Homepage: `https://www.miragespoof.in/`
 - Topics (suggested): `mirage-spoofer`, `android`, `lsposed`, `magisk`, `kernelsu`, `xposed`, `rooted-android`
 
-Release titles: **Mirage Spoofer APK v21.38** (keep “Mirage Spoofer APK” in the text).
+Release titles: **Mirage Spoofer APK v21.39** (keep “Mirage Spoofer APK” in the text).
 
 ## Google Search Console (you apply)
 
@@ -35,7 +35,7 @@ These show in Google as extra brand results. Code cannot create them.
 ### Aptoide
 
 1. Create a developer account on [Aptoide](https://www.aptoide.com/).
-2. Publish the **official** `Mirage_Spoofer_v21.38.apk` with name **Mirage Spoofer**, package as in the APK, and website `https://www.miragespoof.in/`.
+2. Publish the **official** `Mirage_Spoofer_v21.39.apk` with name **Mirage Spoofer**, package as in the APK, and website `https://www.miragespoof.in/`.
 3. Do **not** create fake Softonic scrape pages. Softonic often copies real store listings later.
 
 ### XDA
