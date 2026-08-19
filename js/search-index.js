@@ -232,5 +232,53 @@ window.MIRAGE_SEARCH_INDEX = [
     url: "blog/device-id-changer-android.html",
     tags: ["blog", "device id changer", "android id", "ssaid", "root"],
     text: "How to change Android device ID on root with Helper, LSPosed, and Mirage profiles."
+  },
+  {
+    title: "Magisk root",
+    url: "magisk.html",
+    tags: ["magisk", "magisk root", "zygisk", "denylist"],
+    text: "Magisk root for Mirage Spoofer: Zygisk, DenyList, Helper Magisk module, LSPosed, then APK."
+  },
+  {
+    title: "Magisk module zip",
+    url: "magisk-module.html",
+    tags: ["magisk module", "magisk module zip", "flash magisk module", "helper zip"],
+    text: "Flash Mirage Helper as a Magisk module from storage, then reboot. APK is not the module."
+  },
+  {
+    title: "KernelSU",
+    url: "kernelsu.html",
+    tags: ["kernelsu", "kernel su", "ksu", "kernelsu module"],
+    text: "KernelSU root path: flash the same Helper zip as a KernelSU module, then APK and LSPosed."
+  },
+  {
+    title: "Zygisk",
+    url: "zygisk.html",
+    tags: ["zygisk", "magisk zygisk", "zygisk lsposed"],
+    text: "Enable Zygisk in Magisk before LSPosed and Mirage Spoofer."
+  },
+  {
+    title: "Hide root",
+    url: "hide-root.html",
+    tags: ["hide root", "hide magisk", "anti root", "magisk hide", "hide su"],
+    text: "Anti-Root Mode and Helper v12 hide su folders and Magisk/LSPosed from the app list. Not Play Integrity."
+  },
+  {
+    title: "Rooted Android",
+    url: "rooted-android.html",
+    tags: ["rooted android", "root android", "rooted phone", "root required"],
+    text: "Mirage Spoofer is for rooted Android only: Magisk or KernelSU, Helper, LSPosed, official APK."
+  },
+  {
+    title: "IMEI changer",
+    url: "imei-changer.html",
+    tags: ["imei changer", "imei changer android", "change imei root", "imei spoofer"],
+    text: "IMEI changer on rooted Android via LSPosed profiles. Helper required. Educational use, follow local law."
+  },
+  {
+    title: "Sitemap",
+    url: "sitemap.html",
+    tags: ["sitemap", "all pages", "magisk", "kernelsu"],
+    text: "Complete list of official Mirage Spoofer pages including Magisk, KernelSU, hide root, IMEI changer."
   }
 ];
