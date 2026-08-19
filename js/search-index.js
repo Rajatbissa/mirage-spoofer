@@ -280,5 +280,11 @@ window.MIRAGE_SEARCH_INDEX = [
     url: "sitemap.html",
     tags: ["sitemap", "all pages", "magisk", "kernelsu"],
     text: "Complete list of official Mirage Spoofer pages including Magisk, KernelSU, hide root, IMEI changer."
+  },
+  {
+    title: "Root and module keyword index",
+    url: "root/",
+    tags: ["magisk", "kernelsu", "zygisk", "lsposed", "helper", "hide root", "root module", "sitemap"],
+    text: "235 Magisk, KernelSU, Zygisk, LSPosed, Helper zip, and hide-root long-tail pages plus the official download."
   }
 ];
