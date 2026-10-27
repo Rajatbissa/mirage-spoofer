@@ -6,10 +6,10 @@ window.MIRAGE_SEARCH_INDEX = [
     text: "Setup Mirage Spoofer: Magisk or KernelSU, Helper module, official APK v21.39, LSPosed, login. Official Telegram for help."
   },
   {
-    title: "Telegram",
+    title: "Mirage Spoofer Telegram group",
     url: "telegram.html",
-    tags: ["telegram", "admin", "group", "support", "t.me"],
-    text: "Official Mirage Spoofer Telegram. Admin t.me/Miragespoofer and group t.me/miragespoofer_root."
+    tags: ["telegram", "telegram group", "miragespoofer_root", "admin", "group", "support", "t.me", "join"],
+    text: "Official Mirage Spoofer Telegram group @miragespoofer_root at t.me/miragespoofer_root. Setup and updates. Admin t.me/Miragespoofer for license."
   },
   {
     title: "How to install Mirage Spoofer",
@@ -274,6 +274,12 @@ window.MIRAGE_SEARCH_INDEX = [
     url: "imei-changer.html",
     tags: ["imei changer", "imei changer android", "change imei root", "imei spoofer"],
     text: "IMEI changer on rooted Android via LSPosed profiles. Helper required. Educational use, follow local law."
+  },
+  {
+    title: "How to join the Mirage Spoofer Telegram group",
+    url: "blog/telegram-group.html",
+    tags: ["blog", "telegram", "telegram group", "miragespoofer_root", "join", "t.me"],
+    text: "Join the official group at t.me/miragespoofer_root. Username must be miragespoofer_root. License is admin @Miragespoofer."
   },
   {
     title: "Sitemap",
