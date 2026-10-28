@@ -668,3 +668,55 @@ img.in-flag {
 }
 .kw-pills a:hover { border-color: var(--primary-2); }
 
+body {
+  background:
+    radial-gradient(circle at 8% -8%, rgba(232, 163, 23, 0.22), transparent 34%),
+    radial-gradient(circle at 100% 0%, rgba(176, 42, 55, 0.2), transparent 30%),
+    var(--bg);
+}
+.site-header {
+  border-bottom-color: rgba(232, 163, 23, 0.35);
+}
+.diwali-sky {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.diwali-sign {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+main, .site-footer { position: relative; z-index: 1; }
+.card, .price-card, .work-card {
+  border-color: rgba(232, 163, 23, 0.28);
+}
+.btn-main {
+  box-shadow: 0 0 0 1px rgba(240, 193, 74, 0.45), 0 8px 22px rgba(232, 163, 23, 0.18);
+}
+.price-old {
+  margin: 8px 0 0;
+  color: #b9aed8;
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.offer-tag {
+  display: inline-block;
+  margin: 8px 0 0 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f0c14a;
+  color: #2a1408;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
