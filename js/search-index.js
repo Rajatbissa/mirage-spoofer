@@ -186,6 +186,72 @@ window.MIRAGE_SEARCH_INDEX = [
     text: "Standard 15 days ₹1049, no offer. Diwali: 30 days ₹1250 ($13), was ₹1599. 90 days ₹3899 ($39), was ₹4599 or $50. Lifetime $550, was $1100. Buy via Telegram admin."
   },
   {
+    title: "Diwali offer",
+    url: "diwali-offer.html",
+    tags: ["diwali", "diwali offer", "offer", "1250", "550", "price"],
+    text: "Mirage Spoofer Diwali offer. 30 days ₹1250 was ₹1599. 90 days ₹3899 was ₹4599. Lifetime $550 was $1100. 15 days ₹1049."
+  },
+  {
+    title: "Mirage Spoofer price",
+    url: "mirage-spoofer-price.html",
+    tags: ["price", "cost", "₹1250", "license price", "diwali"],
+    text: "Mirage Spoofer price. 15 days ₹1049. Diwali 30 days ₹1250, 90 days ₹3899, Lifetime $550."
+  },
+  {
+    title: "Mirage Spoofer lifetime",
+    url: "mirage-spoofer-lifetime.html",
+    tags: ["lifetime", "one time", "$550", "$1100", "license"],
+    text: "Mirage Spoofer lifetime license. Diwali $550. Regular lifetime price $1100. One account, one device."
+  },
+  {
+    title: "Buy Mirage Spoofer",
+    url: "buy-mirage-spoofer.html",
+    tags: ["buy", "license", "telegram", "admin", "diwali"],
+    text: "Buy Mirage Spoofer from Telegram admin @Miragespoofer. Diwali 30 days ₹1250, 90 days ₹3899, Lifetime $550."
+  },
+  {
+    title: "Android ID changer",
+    url: "android-id-changer.html",
+    tags: ["android id", "android id changer", "ssaid", "change android id"],
+    text: "Android ID changer for rooted Android. Per-profile Android ID with LSPosed, Magisk or KernelSU, and the Helper module."
+  },
+  {
+    title: "MAC address changer",
+    url: "mac-address-changer.html",
+    tags: ["mac", "mac address", "mac changer", "wifi mac"],
+    text: "MAC address changer for rooted Android. MAC-style identity fields live on each Mirage profile."
+  },
+  {
+    title: "Advertising ID changer",
+    url: "ad-id-changer.html",
+    tags: ["ad id", "advertising id", "gaid", "google ad id"],
+    text: "Advertising ID changer. Each Mirage profile can carry its own Google Ad-ID."
+  },
+  {
+    title: "SSAID changer",
+    url: "ssaid-changer.html",
+    tags: ["ssaid", "ssaid changer", "android id", "settings ssaid"],
+    text: "SSAID changer. Mirage Spoofer keeps a per-profile SSAID and switches it from the widget."
+  },
+  {
+    title: "GSF ID changer",
+    url: "gsf-id-changer.html",
+    tags: ["gsf", "gsf id", "google services framework"],
+    text: "GSF ID searches lead to Mirage Spoofer, the rooted identity engine. Does not claim Play Integrity."
+  },
+  {
+    title: "Android serial changer",
+    url: "android-serial-changer.html",
+    tags: ["serial", "serial number", "ro.serialno", "build serial"],
+    text: "Android serial number changer. Build and serial-style identity sit on the Mirage profile."
+  },
+  {
+    title: "Bulk profile creator",
+    url: "bulk-profile-creator.html",
+    tags: ["bulk", "bulk profiles", "profile creator", "many profiles"],
+    text: "Bulk profile creator. Make many Android identity profiles and switch them from the floating widget."
+  },
+  {
     title: "Plan expired — Profile still opens",
     url: "faq.html#expired",
     tags: ["expired", "recharge", "profile", "login"],
